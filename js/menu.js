@@ -1,7 +1,6 @@
-var theToggle = document.getElementById('toggle');
+//Animación de Boton Menu
 
-// based on Todd Motto functions
-// https://toddmotto.com/labs/reusable-js/
+var theToggle = document.getElementById('toggle');
 
 // hasClass
 function hasClass(elem, className) {
@@ -42,6 +41,7 @@ theToggle.onclick = function() {
    return false;
 }
 
+//Aparece y desaparece el Menu con animación
 function menu(){
     var x = document.getElementById('menu');
     var y = document.getElementById('aparicion');

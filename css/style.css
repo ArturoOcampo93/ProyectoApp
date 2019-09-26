@@ -1,25 +1,32 @@
 
+/* Etiquetas Semanticas*/
 img{
     width: 100%;
 }
 a{
     color: inherit;
 }
+/* Home */
+
+/*Grid*/
 .ContainerGrid{
     display: grid;
     height: 100%;
     grid-template-columns: auto;
     grid-template-rows: 350px auto;
 }
+/*Seccion de la imagen y titulos*/
 .ImgContainer{
     grid-row-start: 1;
     grid-row-end: 2;
 }
+/*Sección del contenido*/
 .BoxContainer{
     grid-row-start: 2;
     grid-row-end: 3;
     background: white;
 }
+/*Seccion blanca con el borde superior redondeado*/
 .ContentBox{
     display: grid;
     grid-template-columns: 10px auto 10px;
@@ -30,15 +37,18 @@ a{
     z-index:1;
     background: white;
 
+    /*Bordes Redondos*/
     border-radius: 50px 50px 0px 0px;
     -moz-border-radius: 50px 50px 0px 0px;
     -webkit-border-radius: 50px 50px 0px 0px;
     border: 0px solid #000000;
 
+    /*Sombra*/
     -webkit-box-shadow: 0px -37px 51px -11px rgba(0,0,0,0.98);
     -moz-box-shadow: 0px -37px 51px -11px rgba(0,0,0,0.98);
     box-shadow: 0px -37px 51px -11px rgba(0,0,0,0.98);
 }
+/* Clases de botones posicionados en un Grid */
 .A{
     grid-column-start: 2; 
     grid-row-start: 2;
@@ -55,6 +65,8 @@ a{
     grid-row-end: 5;
     background: rgb(204, 204, 204);
 }
+
+/* Botones */
 button{
     border-radius: 25px 25px 25px 25px;
     -moz-border-radius: 25px 25px 25px 25px;
@@ -65,8 +77,7 @@ button{
 button:hover{
     background: #CBCBCB;
 }
-
-
+/*Sección de imagen Fondo | Opacidad | sección de titulos principales*/
 .background{
     width: 100%;
     margin: 0 auto;
@@ -93,6 +104,8 @@ button:hover{
     grid-row-end: 3;
     color: white;
 }
+
+/* Footer */
 footer{
     width: 100%;
     position: fixed;
@@ -100,6 +113,7 @@ footer{
     z-index: 2;
     background: white;
 }
+/* Contenedor de Footer */
 .BoxFooter{
     width: 100%;
     border-radius: 20px 20px 0px 0px;
@@ -136,6 +150,7 @@ li:hover{
 #aparicion{
     display: none;
 }
+/*Boton de Menu animado | animaciones*/
 #toggle {
     display: block;
     width: 28px;
@@ -178,6 +193,7 @@ li:hover{
     transform: rotate(-45deg) translate(7px, -8px);
   }
 
+/*Animación Lateral izquierda*/
 @keyframes slideInLeft {
   from {
     transform: translate3d(-100%, 0, 0);
@@ -192,7 +208,7 @@ li:hover{
 .slideInLeft {
   animation-name: slideInLeft;
 }
-
+/*Animación Abajo | Arriba*/
 @keyframes Down {
     from {height: 0px;}
     to {height: 135px;}
@@ -211,7 +227,10 @@ li:hover{
     text-decoration: none;
     color: #323232;
 }
+/* Seccion | Footer | Ganadores */
 .TextoGanadores{
     padding-top: 2%;
     margin-left: 10px;
 }
+
+/* /Home */
