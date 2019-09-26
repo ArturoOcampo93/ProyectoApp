@@ -1,0 +1,217 @@
+
+img{
+    width: 100%;
+}
+a{
+    color: inherit;
+}
+.ContainerGrid{
+    display: grid;
+    height: 100%;
+    grid-template-columns: auto;
+    grid-template-rows: 350px auto;
+}
+.ImgContainer{
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.BoxContainer{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background: white;
+}
+.ContentBox{
+    display: grid;
+    grid-template-columns: 10px auto 10px;
+    grid-template-rows: 50px 60px 60px 60px 100px;
+    grid-gap: 15px;
+    position: relative;
+    margin-top: -60px;
+    z-index:1;
+    background: white;
+
+    border-radius: 50px 50px 0px 0px;
+    -moz-border-radius: 50px 50px 0px 0px;
+    -webkit-border-radius: 50px 50px 0px 0px;
+    border: 0px solid #000000;
+
+    -webkit-box-shadow: 0px -37px 51px -11px rgba(0,0,0,0.98);
+    -moz-box-shadow: 0px -37px 51px -11px rgba(0,0,0,0.98);
+    box-shadow: 0px -37px 51px -11px rgba(0,0,0,0.98);
+}
+.A{
+    grid-column-start: 2; 
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.B{
+    grid-column-start: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+.C{
+    grid-column-start: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    background: rgb(204, 204, 204);
+}
+button{
+    border-radius: 25px 25px 25px 25px;
+    -moz-border-radius: 25px 25px 25px 25px;
+    -webkit-border-radius: 25px 25px 25px 25px;
+    border:1px solid grey;
+    background: rgb(241, 241, 241);
+}
+button:hover{
+    background: #CBCBCB;
+}
+
+
+.background{
+    width: 100%;
+    margin: 0 auto;
+    z-index: -1;
+    position: absolute;
+}
+.opacity{
+    width: 100%;
+    height: 350px;
+    margin: 0 auto;
+    z-index: 1;
+    background: #000000;
+    position: absolute;
+    background: rgb(148,148,148);
+    background: linear-gradient(180deg, rgba(148,148,148,0.5) 0%, rgba(57,57,57,0.5) 60%);
+
+    display: grid;
+    grid-template-columns: 30px auto 30px;
+    grid-template-rows: 80px auto;
+}
+.ContentTitle{
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    color: white;
+}
+footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+    background: white;
+}
+.BoxFooter{
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+    -moz-border-radius: 20px 20px 0px 0px;
+    -webkit-border-radius: 20px 20px 0px 0px;
+    border: 0px solid #000000;
+    -webkit-box-shadow: 0px 19px 60px 5px rgba(0,0,0,0.66);
+    -moz-box-shadow: 0px 19px 60px 5px rgba(0,0,0,0.66);
+    box-shadow: 0px 19px 60px 5px rgba(0,0,0,0.66);
+    padding: 3% 0% 3% 0%;
+}
+
+.menu{
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+#menu{
+    display: none;
+}
+ul{
+    padding-top: 3%;
+    list-style: none;
+}
+li a{
+    color: #323232;
+}
+li{
+    margin: 3% 0%3% 0%;
+}
+li:hover{
+    margin-left: 3%;
+}
+#aparicion{
+    display: none;
+}
+#toggle {
+    display: block;
+    width: 28px;
+    height: 30px;
+    padding-top: 10%;
+  }
+  
+  #toggle span:after,
+  #toggle span:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -9px;
+  }
+  #toggle span:after{
+    top: 9px;
+  }
+  #toggle span {
+    position: relative;
+    display: block;
+  }
+  #toggle span,
+  #toggle span:after,
+  #toggle span:before {
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    transition: all 0.3s;
+    backface-visibility: hidden;
+    border-radius: 2px;
+  }
+  /* Animación Icono de Menu */
+  #toggle.on span {
+    background-color: transparent;
+  }
+  #toggle.on span:before {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  #toggle.on span:after {
+    transform: rotate(-45deg) translate(7px, -8px);
+  }
+
+@keyframes slideInLeft {
+  from {
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInLeft {
+  animation-name: slideInLeft;
+}
+
+@keyframes Down {
+    from {height: 0px;}
+    to {height: 135px;}
+}
+@keyframes Up {
+    from {height: 135px;}
+    to {height: 0px;}
+}
+
+.ContainerFooter a{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.ContainerFooter a:hover{
+    text-decoration: none;
+    color: #323232;
+}
+.TextoGanadores{
+    padding-top: 2%;
+    margin-left: 10px;
+}
