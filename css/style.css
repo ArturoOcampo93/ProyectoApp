@@ -279,7 +279,7 @@ video{
 }
 
 /* Vista versión Tablet y Desktop */
-@media only screen and (min-width: 660px) {
+@media only screen and (min-width: 680px) {
     .Mobile {
       display: none;
     }
