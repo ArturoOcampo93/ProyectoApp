@@ -1,10 +1,31 @@
 
+/* Fuente */
+@font-face {
+    font-family: 'western_swaggerregular';
+    src: url('../fonts/westernswaggerdemo-webfont.woff2') format('woff2'),
+      url('../fonts/westernswaggerdemo-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
 /* Etiquetas Semanticas*/
 img{
     width: 100%;
 }
 a{
     color: inherit;
+}
+h3{
+    font-family: "western_swaggerregular",sans-serif;
+    color: #191719;
+    letter-spacing: 2px;
+    font-size: 32pt;
+    margin-bottom: 3%;
+}
+.textResponsive{
+    padding: 0% 6% 0% 6%;
+    font-size: 16pt;
+    margin-bottom: 5%;
 }
 /* Home */
 
@@ -232,5 +253,44 @@ li:hover{
     padding-top: 2%;
     margin-left: 10px;
 }
+/* Sección para tamaños de pantalla incompatibles */
+.Responsive{
+    display: none;
+}
+.FloatBox{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+.BoxContainer-Responsive{
+    width: 50%;
+    height: auto;
+    padding: 3%;
+    background: white;
+    margin-top: 8%;
+    text-align: center;
+    -webkit-box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.8);
+    -moz-box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.8);
+    box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.8);
+}
+video{
+    width: 100%;
+}
+
+/* Vista versión Tablet y Desktop */
+@media only screen and (min-width: 660px) {
+    .Mobile {
+      display: none;
+    }
+    .Responsive{
+        display: block;
+    }
+    footer{
+        display: none;
+    }
+  }
+
+
 
 /* /Home */
