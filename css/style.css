@@ -15,6 +15,10 @@ img{
 a{
     color: inherit;
 }
+h1{
+    font-size: 38pt;
+    color: #00cfc6;
+}
 h3{
     font-family: "western_swaggerregular",sans-serif;
     color: #191719;
@@ -54,7 +58,7 @@ h3{
     grid-template-rows: 50px 60px 60px 60px 100px;
     grid-gap: 15px;
     position: relative;
-    margin-top: -60px;
+    margin-top: -40px;
     z-index:1;
     background: white;
 
@@ -84,7 +88,9 @@ h3{
     grid-column-start: 2;
     grid-row-start: 4;
     grid-row-end: 5;
-    background: rgb(204, 204, 204);
+    background: rgb(255,232,116);
+    background: linear-gradient(180deg, rgba(255,232,116,1) 0%, rgba(242,204,16,1) 96%);
+
 }
 
 /* Botones */
@@ -92,11 +98,12 @@ button{
     border-radius: 25px 25px 25px 25px;
     -moz-border-radius: 25px 25px 25px 25px;
     -webkit-border-radius: 25px 25px 25px 25px;
-    border:1px solid grey;
-    background: rgb(241, 241, 241);
+    background: rgb(244,243,243);
+    background: linear-gradient(180deg, rgba(244,243,243,1) 64%, rgba(254,243,224,1) 96%);
 }
 button:hover{
-    background: #CBCBCB;
+    background: rgb(255,232,116);
+    background: linear-gradient(180deg, rgba(255,232,116,1) 0%, rgba(242,204,16,1) 96%);
 }
 /*Sección de imagen Fondo | Opacidad | sección de titulos principales*/
 .background{
@@ -112,8 +119,8 @@ button:hover{
     z-index: 1;
     background: #000000;
     position: absolute;
-    background: rgb(148,148,148);
-    background: linear-gradient(180deg, rgba(148,148,148,0.5) 0%, rgba(57,57,57,0.5) 60%);
+    background: rgb(120,30,6);
+    background: linear-gradient(180deg, rgba(120,30,6,0.5) 0%, rgba(68,9,0,0.5) 41%, rgba(25,25,25,0.5) 100%);
 
     display: grid;
     grid-template-columns: 30px auto 30px;
@@ -125,6 +132,12 @@ button:hover{
     grid-row-end: 3;
     color: white;
 }
+.title{
+    font-family: 'western_swaggerregular';
+}
+.heading-2{
+    font-size: 16pt;
+}
 
 /* Footer */
 footer{
@@ -132,7 +145,7 @@ footer{
     position: fixed;
     bottom: 0;
     z-index: 2;
-    background: white;
+    background: rgb(247, 247, 247);
 }
 /* Contenedor de Footer */
 .BoxFooter{
@@ -154,9 +167,12 @@ footer{
 }
 #menu{
     display: none;
+    background: #f2cc10;
 }
 ul{
     padding-top: 3%;
+    padding-bottom: 3%;
+    margin-bottom: 0%;
     list-style: none;
 }
 li a{
@@ -167,6 +183,7 @@ li{
 }
 li:hover{
     margin-left: 3%;
+    color: #00cfc6;
 }
 #aparicion{
     display: none;
@@ -252,6 +269,7 @@ li:hover{
 .TextoGanadores{
     padding-top: 2%;
     margin-left: 10px;
+    color: #115f58;
 }
 /* Sección para tamaños de pantalla incompatibles */
 .Responsive{
@@ -277,6 +295,9 @@ li:hover{
 video{
     width: 100%;
 }
+.shadowText{
+    text-shadow:2px 2px 2px rgba(0,0,0,0.83)
+}
 
 /* Vista versión Tablet y Desktop */
 @media only screen and (min-width: 680px) {
@@ -290,7 +311,5 @@ video{
         display: none;
     }
   }
-
-
-
 /* /Home */
+
