@@ -399,7 +399,7 @@ video{
 }
 .opacidad-ofrenda{
     background: rgb(254,254,254);
-background: linear-gradient(270deg, rgba(254,254,254,0.5) 0%, rgba(242,204,16,0.8) 83%);
+    background: linear-gradient(270deg, rgba(254,254,254,0.5) 0%, rgba(242,204,16,0.8) 83%);
 }
 .Lugares{
     margin: 0%;
