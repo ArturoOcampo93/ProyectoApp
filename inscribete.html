@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Mis estilos -->
+    <link rel="stylesheet" href="css/style.css">
+    <!--Animación CSS-->
+    <link rel="stylesheet" href="css/animate.css">
+
+    <title>Halloween 2019 | TVP</title>
+
+  </head>
+  <body>
+    <header></header>
+    <main>
+    <div class="Mobile">
+            <!--Sección del menu-->
+            <div id="menu">
+                <ul id="aparicion">
+                    <li><a class="TextoMenu" href="inscribete.html">- Inscríbete al concurso</a></li>
+                    <li><a class="TextoMenu" href="registrate.html">- Regístrate para votar</a></li>
+                    <li><a class="TextoMenu" href="login.html">- Log In</a></li>
+                </ul>
+            </div>
+            <!--Comienza el GRID-->
+            <div class="ContainerGrid">
+                <!--Sección imagen | Texto Principal-->
+                <div class="ImgContainer">
+                    <div class="background">
+                        <img src="images/FondoPrincipal.png" alt="Background">
+                    </div>
+                    <div class="opacity">
+                        <div class="menu shadowText">
+                            <a href="#menu" id="toggle" onclick="menu()"><span></span></a>
+                        </div>
+                        <div class="ContentTitle">
+                            <img class="text-inscripcion" src="images/inscripcion.png" alt="...">
+                            <p class="shadowText heading-3">Concurso de disfraces</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Sección de Contenido Principal-->
+                <div class="BoxContainer">
+                    <form action="" onsubmit="return Registro()">
+                        <div class="ContentBox Inscripcion-section">
+                            <div class="Container-Title">
+                                <h4 class="Titleform">Llena todos los<br>campos para<br>completar el registro</h4>
+                            </div>
+                                <div class="input-1">
+                                    <input type="text" placeholder="Nombre de tu personaje">
+                                </div>
+                                <div class="input-2">
+                                    <input type="text" placeholder="Email">
+                                </div>
+                                <p class="texto-info">- Sube la foto de tu disfraz -</p>
+                                <input class="ButtonFoto" type="file" name="">
+                                <input class="ButtonEnviar" type="submit" value="Inscribirme">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </main>
+        <!--Footer de la App-->
+        <footer>
+                <div class="BoxFooter">
+                    <div class="ContainerFooter">
+                    <!--Icono Home-->
+                    <a href="index.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="39.49" height="39.739" viewBox="0 0 39.49 39.739">
+                                <g id="home" transform="translate(-0.183)">
+                                  <path id="Trazado_49" data-name="Trazado 49" d="M39.455,18.133,19.927,0,.4,18.133a.681.681,0,0,0,.927,1l2.26-2.1V39.739H36.268V17.032l2.26,2.1a.681.681,0,0,0,.927-1ZM34.907,38.377H4.948V15.768L19.927,1.858,34.907,15.768Z" transform="translate(0)"/>
+                                  <path id="Trazado_50" data-name="Trazado 50" d="M13.182,30.9h9.532V21.365H13.182Zm1.362-8.17h6.809v6.809H14.544Z" transform="translate(-4.148 -6.818)"/>
+                                  <path id="Trazado_51" data-name="Trazado 51" d="M40.714,21.365H31.182V30.9h9.532Zm-1.362,8.17H32.544V22.727h6.809Z" transform="translate(-9.893 -6.818)"/>
+                                  <path id="Trazado_52" data-name="Trazado 52" d="M13.182,48.9h9.532V39.365H13.182Zm1.362-8.17h6.809v6.809H14.544Z" transform="translate(-4.148 -12.563)"/>
+                                  <path id="Trazado_53" data-name="Trazado 53" d="M40.714,39.365H31.182V48.9h9.532Zm-1.362,8.17H32.544V40.727h6.809Z" transform="translate(-9.893 -12.563)"/>
+                                </g>
+                              </svg>                          
+                        </a>
+                    </div>
+                </div>
+            </footer>
+
+        <!-- Vista de Desktop | Tablet -->
+        <div class="Responsive">
+            <div class="fondoDesktop">
+                <div class="FloatBox">
+                    <div class="BoxContainer-Responsive">
+                        <h3>Tu pantalla es muy grande</h3>
+                        <p class="textResponsive">Si quieres visualizar el sitio desde tu desktop, haz la pantalla de tu browser lo más pequeña posible.</p>
+                        <img src="images/AjusteDePantalla.gif" alt="...">
+                    </div>
+                </div>
+                <img src="images/BackgroundAnimas.png" alt="Background Animas">
+            </div>
+        </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!--Mis JS-->
+    <script src="js/menu.js"></script>
+
+  </body>
+</html>
