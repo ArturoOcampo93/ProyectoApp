@@ -24,7 +24,7 @@
                 <ul id="aparicion">
                     <li><a class="TextoMenu" href="index.html">- Home</a></li>
                     <li><a class="TextoMenu" href="registrate.html">- Regístrate para votar</a></li>
-                    <li><a class="TextoMenu" href="login.html">- Ingresa</a></li>
+                    <li><a class="TextoMenu" href="login.html">- Inscríbete al concurso</a></li>
                 </ul>
             </div>
             <!--Comienza el GRID-->
@@ -39,8 +39,7 @@
                             <a href="#menu" id="toggle" onclick="menu()"><span></span></a>
                         </div>
                         <div class="ContentTitle">
-                            <img class="text-inscripcion" src="images/inscripcion.png" alt="...">
-                            <p class="shadowText heading-3">Concurso de disfraces</p>
+                            <h1 class="shadowText title">Ingresa</h1>
                         </div>
                     </div>
                 </div>
@@ -48,23 +47,19 @@
                 <!--Sección de Contenido Principal-->
                 <div class="BoxContainer">
                     <form action="MiCuenta.html">
-                        <div class="ContentBox Inscripcion-section">
+                        <div class="ContentBox Login-section">
                             <div class="Container-Title">
-                                <h4 class="Titleform">Llena todos los<br>campos para<br>completar el registro</h4>
+                                <h4 class="Titleform text-center">Ingresa tus datos.</h4>
                             </div>
-                                <div class="input-1">
-                                    <input type="text" placeholder="Nombre de tu personaje">
-                                </div>
-                                <div class="input-2">
-                                    <input type="text" placeholder="Email">
-                                </div>
-                                <p class="texto-info" id="alerta-inscripcion">Mensaje de alerta(Cambia el texto)</p>
-                                <!--Input File Botón-->
-                                <input id="upload" type="file">
-                                <label for="upload" class="ButtonFoto HoverButton">
-                                    <span>Sube tu foto</span>
-                                </label>
-                            <input class="ButtonEnviar HoverButton" type="submit" value="Inscribirme">
+                            <p class="texto-info-registro" id="alerta-login">Mensaje de alerta(Cambia el texto)</p>
+                            <div class="input-email">
+                                <input type="text" placeholder="Email">
+                            </div>
+                            <div class="input-password">
+                                <input type="text" placeholder="Contraseña">
+                            </div>
+                            <p class="link-registro"><a href="registrate.html">- Regístrate para votar -</a></p>
+                            <input class="ButtonLogIn HoverButton" type="submit" value="Ingresa">
                         </div>
                     </form>
                 </div>
