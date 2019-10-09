@@ -840,3 +840,9 @@ input{
     grid-row-start: 2;
     grid-row-end: 3;
 }
+
+.carousel-inner .carousel-item {
+    transition: -webkit-transform 2s ease;
+    transition: transform 2s ease;
+    transition: transform 2s ease, -webkit-transform 2s ease;
+  }
