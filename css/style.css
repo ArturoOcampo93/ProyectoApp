@@ -801,7 +801,14 @@ input{
     border-radius: 40px 40px 40px 40px;
     -moz-border-radius: 40px 40px 40px 40px;
     -webkit-border-radius: 40px 40px 40px 40px;
-    
+}
+.disfraces{
+    background: rgb(0,207,198);
+    background: linear-gradient(180deg, rgba(0,207,198,0.10688025210084029) 30%, rgba(0,207,198,1) 86%);
+}
+.ofrenda{
+    background: rgb(242,204,16);
+    background: linear-gradient(180deg, rgba(242,204,16,0.20772058823529416) 30%, rgba(242,204,16,0.8267682072829132) 86%);
 }
 .contenedor-info{
     display: grid;
@@ -842,6 +849,12 @@ input{
     -webkit-box-shadow: 0px 0px 37px -3px rgba(0,0,0,0.84);
     -moz-box-shadow: 0px 0px 37px -3px rgba(0,0,0,0.84);
     box-shadow: 0px 0px 37px -3px rgba(0,0,0,0.84);
+}
+.boton-disfraces{
+    background: #00cfc6;
+}
+.boton-ofrenda{
+    background: #f2cc10;
 }
 .carousel-control-prev, .carousel-control-next{
     grid-column-start: 2;
