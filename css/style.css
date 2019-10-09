@@ -741,3 +741,102 @@ input{
     background: #f2cc10;
     color: #000000;
 }
+
+/* Votación Baile */
+
+.contenedor-carousel{
+    margin-top: -160px !important;
+    display: grid;
+    grid-template-columns: 10px auto 10px !important;
+    grid-template-rows: 10px 350px 30px 100px !important;
+    grid-gap: 15px !important;
+    
+}
+.Grid-Position-Carousel{
+    grid-column-start: 2; 
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    background: rgb(249,106,135);
+    background: linear-gradient(180deg, rgba(249,106,135,1) 0%, rgba(249,53,92,1) 86%);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Bordes Redondos */
+    border-radius: 40px 40px 40px 40px;
+    -moz-border-radius: 40px 40px 40px 40px;
+    -webkit-border-radius: 40px 40px 40px 40px;
+}
+.img-carousel{
+    height:100%;
+    width: auto;
+}
+.opacity-carousel{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    background: rgb(249,106,135);
+    background: linear-gradient(180deg, rgba(249,106,135,0.21332282913165268) 30%, rgba(249,53,92,0.8407738095238095) 86%);
+
+    /* Bordes Redondos */
+    border-radius: 40px 40px 40px 40px;
+    -moz-border-radius: 40px 40px 40px 40px;
+    -webkit-border-radius: 40px 40px 40px 40px;
+    
+}
+.contenedor-info{
+    display: grid;
+    grid-template-columns: 35px auto 35px;
+    grid-template-rows: 200px 80px 50px 20px;
+}
+.nombre{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    width: 100%;
+    font-size: 16pt;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3%;
+    padding: 0% 8% 0% 8%;
+}
+.boton-votar{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+
+    width: 100%;
+    height: 60px;
+    margin-bottom: 5%;
+
+    border:none;
+    background: #ff5f67;
+    color: white;
+
+    /*Sombra Botón*/
+    -webkit-box-shadow: 0px 0px 37px -3px rgba(0,0,0,0.84);
+    -moz-box-shadow: 0px 0px 37px -3px rgba(0,0,0,0.84);
+    box-shadow: 0px 0px 37px -3px rgba(0,0,0,0.84);
+}
+.carousel-control-prev, .carousel-control-next{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
