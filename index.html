@@ -51,6 +51,7 @@
                         <button class="A" onclick="window.location.href='inscribete.html'">Inscríbete al concurso</button>
                         <button class="B" onclick="window.location.href='registrate.html'">Regístrate para votar</button>
                         <button class="C" onclick="window.location.href='login.html'">Ingresa</button>
+                        <button class="C" id="goFS">Go fullscreen</button>
                     </div>
                 </div>
             </div>
@@ -112,7 +113,10 @@
     <!--Mis JS-->
     <script src="js/menu.js"></script>
         <script>
-          document.body.requestFullscreen();
+          var goFS = document.getElementById("goFS");
+          goFS.addEventListener("click", function() {
+              document.body.requestFullscreen();
+          }, false);
         </script>
   </body>
 </html>
