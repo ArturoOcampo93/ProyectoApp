@@ -915,3 +915,38 @@ input{
   .submit:hover{
       background: #3f5efb;
   }
+
+  /* Thank You Page */
+
+  .thankPage{
+    margin-top: -200px;
+    grid-template-columns: 10px auto 10px;
+    grid-template-rows: 50px 300px 100px;
+    grid-gap: 15px;
+  }
+  .Content-Text{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+  }
+  .titulo-gracias{
+      text-align:center; 
+      font-size: 30pt;
+      margin: 0%;
+  }
+  .text-thanks{
+      font-size: 18pt;
+      padding: 0% 8% 0% 8%;
+      text-align: center;
+  }
+  .thanksButton{
+      width: 100%;
+      height: 60px;
+  }
