@@ -123,7 +123,7 @@ button:hover{
     background: #000000;
     position: absolute;
     background: rgb(63,94,251);
-    background: linear-gradient(0deg, rgba(63,94,251,0.87718837535014) 0%, rgba(252,70,107,0.7483368347338936) 86%);
+    background: linear-gradient(0deg, rgba(63, 94, 251, 0.877) 0%, rgba(252,70,107,0.7483368347338936) 86%);
 
     display: grid;
     grid-template-columns: 30px auto 30px;
@@ -417,7 +417,7 @@ video{
 }
 .opacidad-ofrenda{
     background: rgb(254,254,254);
-    background: linear-gradient(270deg, rgba(254,254,254,0.5) 0%, rgba(242,204,16,0.8) 83%);
+    background: linear-gradient(270deg, rgba(254,254,254,0.5) 0%, rgba(242,204,16,0.8) 83%) !important;
 }
 .Lugares{
     margin: 0%;
@@ -953,50 +953,202 @@ input{
 
   /* Pantalla */
 
-  .Pantalla{
+
+  .FondoPrincipal{
+      width: 100%;
+      height: 100%;
+      background-image: url('BackgroundAnimas-opacidad.png');
+      background-repeat: no-repeat, repeat;
+      background-size: cover;
+
+      display: flex;
+      justify-content: center;
+  }
+  .Fondo-Degrade{
+      width: 100%;
+      height:100%;
+      position: absolute;
+      background: rgb(63,94,251);
+      background: linear-gradient(0deg, rgba(63,94,251,0.87718837535014) 0%, rgba(252,70,107,0.7483368347338936) 86%);
+  }
+  .contenedor-ganadores{
+    min-width: 1500px;
+    margin-top: 160px;
+    height: auto;
+    padding: 1%;
+    background: #ffffff;
+
     display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: 1000px;
-    grid-gap: 2px;
-    position: relative;
-    margin-top: -100px;
-    z-index:1;
-    background: white;
+    grid-template-columns: 500px 500px 500px;
+    grid-template-rows: auto;
+    grid-gap: 15px;
 
     /*Bordes Redondos*/
-    border-radius: 50px 50px 0px 0px;
-    -moz-border-radius: 50px 50px 0px 0px;
-    -webkit-border-radius: 50px 50px 0px 0px;
+    border-radius: 80px 80px 0px 0px;
+    -moz-border-radius: 80px 80px 0px 0px;
+    -webkit-border-radius: 80px 80px 0px 0px;
     border: 0px solid #000000;
 
     /*Sombra*/
     -webkit-box-shadow: -4px -10px 17px -2px rgba(0,0,0,0.46);
     -moz-box-shadow: -4px -10px 17px -2px rgba(0,0,0,0.46);
     box-shadow: -4px -10px 17px -2px rgba(0,0,0,0.46);
-}
-.BigText{
-    font-family: "western_swaggerregular",sans-serif;
-    font-size: 70pt;
-    letter-spacing: 20px;
-    text-align: center;
-}
-.column-uno{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-}
-.column-dos{
+  }
+  .cont-disfraz, .cont-baile{
+    display: grid;
+    grid-template-columns: 10px auto 10px;
+    grid-template-rows:150px 150px 70px 150px 70px 150px 70px; 
+    grid-gap: 15px;
+
+    -webkit-box-shadow: 10px 0px 10px -10px rgba(0,0,0,0.5);
+    -moz-box-shadow: 10px 0px 10px -10px rgba(0,0,0,0.5);
+    box-shadow: 10px 0px 10px -10px rgba(0,0,0,0.5);
+  }
+  .cont-ofrenda{
+    display: grid;
+    grid-template-columns: 10px auto 10px;
+    grid-template-rows:150px 150px 70px 150px 70px 150px 70px; 
+    grid-gap: 15px;
+  }
+  .titulo-ganadores-pantalla{
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
+    grid-row-end: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .TituloDisfraces{
+      margin-left: 4%;
+      margin-bottom: 0%;
+      letter-spacing: 4px;
+      color: #00cfc6;
+  }
+  .TituloBaile{
+    margin-left: 4%;
+    margin-bottom: 0%;
+    letter-spacing: 4px;
+    color: #FF012C;
 }
-.column-tres{
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 1;
+.TituloOfrenda{
+    margin-left: 4%;
+    margin-bottom: 0%;
+    letter-spacing: 4px;
+    color:#E2B600;
 }
-.BoxSelect{
-    -webkit-box-shadow: 10px 0px 18px -15px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 0px 18px -15px rgba(0,0,0,0.75);
-    box-shadow: 10px 0px 18px -15px rgba(0,0,0,0.75);
+.cont-Primerlugar{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.cont-Segundolugar{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+.cont-Tercerlugar{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    grid-row-end: 7;
+}
+/* Primeros lugares Disfraces */
+
+.opacidad-ganadores-primer-lugar{
+    /* Posición del Lugar 1º, 2º o 3º */
+    display: flex;
+    justify-content: flex-start;
+
+    /* Gradiante */
+    width: 450px;
+    height: 150px;
+    padding: 30px;
+    position: absolute;
+    background: rgb(254,254,254);
+    background: linear-gradient(270deg, rgba(254,254,254,0.5) 0%, rgba(0,207,198,0.8) 83%);
+
+    /* Bordes Redondos */
+    border-radius: 40px 40px 40px 40px;
+    -moz-border-radius: 40px 40px 40px 40px;
+    -webkit-border-radius: 40px 40px 40px 40px;
+    border: 0px solid #000000;  
+}
+.primer-lugar{
+    grid-column-start: 2; 
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    text-align: center;
+}
+
+/* segundo lugar disfraces */
+
+.opacidad-ganadores-segundo-lugar{
+    /* Posición del Lugar 1º, 2º o 3º */
+    display: flex;
+    justify-content: flex-start;
+
+    /* Gradiante */
+    width: 450px;
+    height: 150px;
+    padding: 30px;
+    position: absolute;
+    background: rgb(254,254,254);
+    background: linear-gradient(270deg, rgba(254,254,254,0.5) 0%, rgba(0,207,198,0.8) 83%);
+
+    /* Bordes Redondos */
+    border-radius: 40px 40px 40px 40px;
+    -moz-border-radius: 40px 40px 40px 40px;
+    -webkit-border-radius: 40px 40px 40px 40px;
+    border: 0px solid #000000;  
+}
+.segundo-lugar{
+    grid-column-start: 2; 
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    text-align: center;
+}
+
+/* Tercer lugar disfraces */
+
+.opacidad-ganadores-tercer-lugar{
+    /* Posición del Lugar 1º, 2º o 3º */
+    display: flex;
+    justify-content: flex-start;
+
+    /* Gradiante */
+    width: 450px;
+    height: 150px;
+    padding: 30px;
+    position: absolute;
+    background: rgb(254,254,254);
+    background: linear-gradient(270deg, rgba(254,254,254,0.5) 0%, rgba(0,207,198,0.8) 83%);
+
+    /* Bordes Redondos */
+    border-radius: 40px 40px 40px 40px;
+    -moz-border-radius: 40px 40px 40px 40px;
+    -webkit-border-radius: 40px 40px 40px 40px;
+    border: 0px solid #000000;  
+}
+.tercer-lugar{
+    grid-column-start: 2; 
+    grid-column-end: 3;
+    grid-row-start: 7;
+    grid-row-end: 8;
+    text-align: center;
+}
+.titulo-principal-ganadores-pantalla{
+    position: absolute;
+    width: 100%;
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 50pt;
+    font-family: "western_swaggerregular",sans-serif;
+    letter-spacing: 6px;
 }
