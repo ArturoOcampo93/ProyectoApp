@@ -1155,7 +1155,7 @@ input{
 .Responsive-2{
     display: none;
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1440px) {
 
       .Responsive-2{
           display: block;
