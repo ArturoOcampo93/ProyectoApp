@@ -47,24 +47,25 @@
 
                 <!--Sección de Contenido Principal-->
                 <div class="BoxContainer">
-                    <form action="MiCuenta.html">
+                    <form name="formDisfraz" id="formDisfraz">
                         <div class="ContentBox Inscripcion-section">
                             <div class="Container-Title">
                                 <h4 class="Titleform">Llena todos los<br>campos para<br>completar el registro</h4>
                             </div>
                                 <div class="input-1">
-                                    <input type="text" placeholder="Nombre de tu personaje">
+                                    <input type="text" id="nombre" name="nombre" placeholder="Nombre de tu personaje">
                                 </div>
                                 <div class="input-2">
-                                    <input type="text" placeholder="Email">
+                                    <input type="text" name="email" id="email" placeholder="Email">
                                 </div>
                                 <p class="texto-info" id="alerta-inscripcion">Mensaje de alerta(Cambia el texto)</p>
                                 <!--Input File Botón-->
-                                <input id="upload" type="file">
-                                <label for="upload" class="ButtonFoto HoverButton">
+                                <input type="hidden" name="imagen" id="imagen">
+                                <input id="upload" name="upload" type="file">
+                                <label for="upload"  class="ButtonFoto HoverButton">
                                     <span>Sube tu foto</span>
                                 </label>
-                            <input class="ButtonEnviar HoverButton" type="submit" value="Inscribirme">
+                            <input class="ButtonEnviar HoverButton" type="button" id="btRegistrate" value="Inscribirme">
                         </div>
                     </form>
                 </div>
@@ -85,7 +86,7 @@
                                   <path id="Trazado_52" data-name="Trazado 52" d="M13.182,48.9h9.532V39.365H13.182Zm1.362-8.17h6.809v6.809H14.544Z" transform="translate(-4.148 -12.563)"/>
                                   <path id="Trazado_53" data-name="Trazado 53" d="M40.714,39.365H31.182V48.9h9.532Zm-1.362,8.17H32.544V40.727h6.809Z" transform="translate(-9.893 -12.563)"/>
                                 </g>
-                              </svg>                          
+                              </svg>
                         </a>
                     </div>
                 </div>
@@ -105,13 +106,43 @@
             </div>
         </div>
 
+        <!-- modal vista previa de la imagen -->
+        <!-- Button trigger modal
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+          Launch demo modal
+        </button>-->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Viste previa</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="imagen01"><img class="img-fluid" src="imagesFTP/prueba.jpg" alt="vista previa"> </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!--Mis JS-->
     <script src="js/menu.js"></script>
+    <script src="js/muertos.js"></script>
 
   </body>
 </html>

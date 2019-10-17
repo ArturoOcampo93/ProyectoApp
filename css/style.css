@@ -75,7 +75,7 @@ h3{
 }
 /* Clases de botones posicionados en un Grid */
 .A{
-    grid-column-start: 2; 
+    grid-column-start: 2;
     grid-row-start: 2;
     grid-row-end: 3;
 }
@@ -202,7 +202,7 @@ li:hover{
     height: 30px;
     padding-top: 10%;
   }
-  
+
   #toggle span:after,
   #toggle span:before {
     content: "";
@@ -358,7 +358,7 @@ video{
     grid-gap: 15px !important;
 }
 .Icono-Titulo{
-    grid-column-start: 2; 
+    grid-column-start: 2;
     grid-row-start: 2;
     grid-row-end: 3;
     display: grid;
@@ -388,7 +388,7 @@ video{
 }
 .opacidad-ganadores{
     /* Posición en el grid */
-    grid-column-start: 2; 
+    grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 4;
@@ -427,7 +427,7 @@ video{
 }
 .Nombre-Votos-1{
     /* Posición en el grid */
-    grid-column-start: 2; 
+    grid-column-start: 2;
     grid-row-start: 4;
     grid-row-end: 5;
 
@@ -435,7 +435,7 @@ video{
 }
 .Nombre-Votos-2{
     /* Posición en el grid */
-    grid-column-start: 2; 
+    grid-column-start: 2;
     grid-row-start: 6;
     grid-row-end: 7;
 
@@ -443,7 +443,7 @@ video{
 }
 .Nombre-Votos-3{
     /* Posición en el grid */
-    grid-column-start: 2; 
+    grid-column-start: 2;
     grid-row-start: 8;
     grid-row-end: 9;
 
@@ -453,17 +453,17 @@ video{
     margin-top: 0%;
 }
 .primerlugar{
-    grid-column-start: 2; 
+    grid-column-start: 2;
     grid-row-start: 3;
     grid-row-end: 4;
 }
 .segundolugar{
-    grid-column-start: 2; 
+    grid-column-start: 2;
     grid-row-start: 5;
     grid-row-end: 6;
 }
 .tercerlugar{
-    grid-column-start: 2; 
+    grid-column-start: 2;
     grid-row-start: 7;
     grid-row-end: 8;
 }
@@ -489,7 +489,7 @@ video{
     margin-left: -10px;
 }
 .Container-Title{
-    grid-column-start: 2; 
+    grid-column-start: 2;
     grid-row-start: 2;
     grid-row-end: 3;
 }
@@ -497,12 +497,12 @@ video{
     font-size: 23pt;
 }
 .input-1{
-    grid-column-start: 2; 
+    grid-column-start: 2;
     grid-row-start: 3;
     grid-row-end: 4;
 }
 .input-2{
-    grid-column-start: 2; 
+    grid-column-start: 2;
     grid-row-start: 4;
     grid-row-end: 5;
 }
@@ -518,7 +518,7 @@ input{
     -webkit-border-radius: 40px 40px 40px 40px;
 }
 .ButtonEnviar{
-    grid-column-start: 2; 
+    grid-column-start: 2;
     grid-row-start: 7;
     grid-row-end: 8;
     background: rgb(249,106,135);
@@ -528,10 +528,10 @@ input{
     color: white;
 }
 .texto-info{
-    grid-column-start: 2; 
+    grid-column-start: 2;
     grid-row-start: 5;
     grid-row-end: 6;
-    
+
     background: #f2cc10;
     color: black;
     width: 100%;
@@ -544,11 +544,11 @@ input{
     border-radius: 40px 40px 40px 40px;
     -moz-border-radius: 40px 40px 40px 40px;
     -webkit-border-radius: 40px 40px 40px 40px;
-    
+
 }
-/* CSS Botón Input File */ 
+/* CSS Botón Input File */
 .ButtonFoto{
-    grid-column-start: 2; 
+    grid-column-start: 2;
     grid-row-start: 6;
     grid-row-end: 7;
 
@@ -594,7 +594,7 @@ input{
     grid-gap: 15px !important;
 }
 .texto-info-registro{
-    grid-column-start: 2; 
+    grid-column-start: 2;
     grid-row-start: 3;
     grid-row-end: 4;
 
@@ -612,17 +612,17 @@ input{
     -webkit-border-radius: 40px 40px 40px 40px;
 }
 .input-email{
-    grid-column-start: 2; 
+    grid-column-start: 2;
     grid-row-start: 4;
     grid-row-end: 5;
 }
 .input-password{
-    grid-column-start: 2; 
+    grid-column-start: 2;
     grid-row-start: 5;
     grid-row-end: 6;
 }
 .input-check{
-    grid-column-start: 2; 
+    grid-column-start: 2;
     grid-row-start: 6;
     grid-row-end: 7;
 
@@ -631,7 +631,7 @@ input{
     align-items: center;
 }
 .ButtonRegistro{
-    grid-column-start: 2; 
+    grid-column-start: 2;
     grid-row-start: 8;
     grid-row-end: 9;
 
@@ -661,7 +661,7 @@ input{
     grid-gap: 15px !important;
 }
 .ButtonLogIn{
-    grid-column-start: 2; 
+    grid-column-start: 2;
     grid-row-start: 7;
     grid-row-end: 8;
 
@@ -675,7 +675,7 @@ input{
     text-align: center;
 }
 .link-registro{
-    grid-column-start: 2; 
+    grid-column-start: 2;
     grid-row-start: 6;
     grid-row-end: 7;
 
@@ -699,7 +699,7 @@ input{
     text-align: center;
     margin-top: 30px;
 }
-.contenedor-titulo-flex p{ 
+.contenedor-titulo-flex p{
     padding: 0% 5% 0% 5%;
     font-size: 14pt;
 }
@@ -717,7 +717,7 @@ input{
     height: 100px;
 }
 .LogOut{
-    grid-column-start: 2; 
+    grid-column-start: 2;
     grid-row-start: 1;
     grid-row-end: 2;
 
@@ -758,10 +758,10 @@ input{
     grid-template-columns: 10px auto 10px !important;
     grid-template-rows: 10px 350px 30px 70px !important;
     grid-gap: 15px !important;
-    
+
 }
 .Grid-Position-Carousel{
-    grid-column-start: 2; 
+    grid-column-start: 2;
     grid-row-start: 2;
     grid-row-end: 3;
 

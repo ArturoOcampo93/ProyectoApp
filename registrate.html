@@ -46,23 +46,23 @@
 
                 <!--Sección de Contenido Principal-->
                 <div class="BoxContainer">
-                    <form action="MiCuenta.html">
+                    <form name="formMuertos" id="formMuertos">
                         <div class="ContentBox registro-section">
                             <div class="Container-Title">
                                 <h4 class="Titleform">Para poder votar debes registrarte.</h4>
                             </div>
-                            <p class="texto-info-registro" id="alerta-registro">Mensaje de alerta(Cambia el texto)</p>
+                            <p class="texto-info-registro" id="alertaRegistro">Mensaje de alerta(Cambia el texto)Mensaje de alerta(Cambia el texto)</p>
                             <div class="input-email">
-                                <input type="text" placeholder="Email">
+                                <input type="text" name="email" id="email" placeholder="Email">
                             </div>
                             <div class="input-password">
-                                <input type="text" placeholder="Contraseña">
+                                <input type="text" id="contrasena" name="contrasena" placeholder="Contraseña">
                             </div>
                             <div class="input-check">
-                                <input class="check" type="checkbox">
+                                <input class="check" name="jurado" id="jurado" value="ok" type="checkbox">
                                 <p class="texto-check">Soy jurado</p>
                             </div>
-                            <input class="ButtonRegistro HoverButton" type="submit" value="Registrarme">
+                            <input class="ButtonRegistro HoverButton" type="button" id="btRegistro" value="Registrarme">
                         </div>
                     </form>
                 </div>
@@ -83,7 +83,7 @@
                                   <path id="Trazado_52" data-name="Trazado 52" d="M13.182,48.9h9.532V39.365H13.182Zm1.362-8.17h6.809v6.809H14.544Z" transform="translate(-4.148 -12.563)"/>
                                   <path id="Trazado_53" data-name="Trazado 53" d="M40.714,39.365H31.182V48.9h9.532Zm-1.362,8.17H32.544V40.727h6.809Z" transform="translate(-9.893 -12.563)"/>
                                 </g>
-                              </svg>                          
+                              </svg>
                         </a>
                     </div>
                 </div>
@@ -106,10 +106,12 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!--Mis JS-->
     <script src="js/menu.js"></script>
+    <script src="js/muertos.js"></script>
 
   </body>
 </html>

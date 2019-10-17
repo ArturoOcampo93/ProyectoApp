@@ -1,3 +1,43 @@
+<?php
+session_start();
+require_once("js/clases.php");
+if (isset($_SESSION['muertos']) ) {  //existe la session
+	//echo "valida usuario";
+	$recievedJwt=$_SESSION['muertos'];
+	//token valido
+	$tokenValid = Tocken::validaToken($recievedJwt);
+
+	if($tokenValid){  //el token es valido
+		//datos de token
+		$usuarioC = Tocken::datosToken($recievedJwt);
+		$usuarioC = json_decode($usuarioC, true);
+		//print_r($usuarioC);
+		$existe=Usuarios::buscaRegistro($usuarioC['usuario']);
+
+		if($existe['encontrado'] == "si"){ //el usuario es valido
+		}else{
+			session_destroy();
+			header("Location: index.html");
+			exit(0);
+		}  //termina usuario
+
+	}else{
+		session_destroy();
+		header("Location: index.thml");
+		exit(0);
+	}// termina token
+
+}else{
+	session_destroy();
+	header("Location: index.html");
+	exit(0);
+}  //termina session
+
+//historial de guias
+//print_r($existe);
+
+
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -23,7 +63,7 @@
             <div id="menu">
                 <ul id="aparicion">
                     <li><a class="TextoMenu" href="inscribete.html">- Inscríbete al concurso</a></li>
-                    <li><a class="TextoMenu" href="index.html">- Salir</a></li>
+                    <li><a class="TextoMenu" href="javascript:void(0);" onclick="borrar_localstorage()">- Salir</a></li>
                 </ul>
             </div>
             <!--Comienza el GRID-->
@@ -39,7 +79,7 @@
                         </div>
                         <!--LOG OUT-->
                         <div class="LogOut">
-                            <a href="index.html">
+                            <a href="javascript:void(0);" onclick="borrar_localstorage()">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="39.998" height="29.744" viewBox="0 0 39.998 29.744">
                                     <g id="logout" transform="translate(0 -42.299)">
                                         <g id="XMLID_2_" transform="translate(0 42.299)">
@@ -53,7 +93,9 @@
                         </div>
                         <div class="ContentTitle">
                             <h1 class="shadowText title">Mi cuenta</h1>
-                            <p class="shadowText heading-4">Bienvenido</p>
+                            <p class="shadowText heading-4">Bienvenido
+                              (<?php echo $usuarioC['usuario']; ?>)
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -66,9 +108,13 @@
                             <p>Recuerda que sólo tienes una oportunidad para votar</p>
                         </div>
                         <div class="contenedor-botones-flex">
-                            <button id="disfraces" onclick="window.location.href='VotacionDisfraz.html'">Concurso de disfraces</button>
-                            <button id="baile" onclick="window.location.href='VotacionBaile.html'">Concurso de baile</button>
-                            <button id="ofrenda" onclick="window.location.href='VotacionOfrenda.html'">Concurso de la ofrenda</button>
+                            <button id="disfraces" onclick="window.location.href='VotacionDisfraz.php'">Concurso de disfraces</button>
+                            <?php if ($existe['jurado'] == "ok") { ?>
+                              <button id="baile" onclick="window.location.href='VotacionBaile.php'">Concurso de baile</button>
+                            <?php } ?>
+                            <button id="ofrenda" onclick="window.location.href='VotacionOfrenda.php'">Concurso de la ofrenda</button>
+
+
                         </div>
                         <div class="EndSpace"></div>
                     </div>
@@ -80,7 +126,7 @@
         <footer>
             <div class="BoxFooter">
                 <div class="ContainerFooter">
-                    <a href="DisfracesGanadores.html">
+                    <a href="DisfracesGanadores.php">
                         <!-- SVG | ICONO | COPA -->
                         <svg xmlns="http://www.w3.org/2000/svg" width="30.468" height="35.58" viewBox="0 0 30.468 35.58">
                             <g id="Grupo_6" data-name="Grupo 6" transform="translate(57 -579)">
@@ -99,7 +145,7 @@
                             </g>
                           </svg>
                         <p class="TextoGanadores">Ver ganadores</p>
-                    </a>  
+                    </a>
                 </div>
             </div>
         </footer>
@@ -125,6 +171,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!--Mis JS-->
     <script src="js/menu.js"></script>
-
+    <script src="js/muertos.js"></script>
   </body>
 </html>

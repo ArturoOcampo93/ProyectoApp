@@ -1,3 +1,54 @@
+<?php
+session_start();
+require_once("js/clases.php");
+if (isset($_SESSION['muertos']) ) {  //existe la session
+	//echo "valida usuario";
+	$recievedJwt=$_SESSION['muertos'];
+	//token valido
+	$tokenValid = Tocken::validaToken($recievedJwt);
+
+	if($tokenValid){  //el token es valido
+		//datos de token
+		$usuarioC = Tocken::datosToken($recievedJwt);
+		$usuarioC = json_decode($usuarioC, true);
+		//print_r($usuarioC);
+		$existe=Usuarios::buscaRegistro($usuarioC['usuario']);
+
+		if($existe['encontrado'] == "si"){ //el usuario es valido
+		}else{
+			session_destroy();
+			header("Location: index.html");
+			exit(0);
+		}  //termina usuario
+
+	}else{
+		session_destroy();
+		header("Location: index.thml");
+		exit(0);
+	}// termina token
+
+}else{
+	session_destroy();
+	header("Location: index.html");
+	exit(0);
+}  //termina session
+
+//historial de disfraces
+
+$busco="";
+if (isset($_SESSION['busco']) ) {
+
+	$busco= $_SESSION['busco'];
+	$_SESSION['busco']="";
+}
+if($busco){
+	$noRes = 0;
+	$todosDiafraces=Usuarios::buscaBaileConsulta($busco);
+}else{
+	$todosDiafraces = Usuarios::todosBailes();
+
+}
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -63,42 +114,95 @@
                     <div id="carouselExampleControls" class="carousel slide ContentBox contenedor-carousel" data-ride="carousel">
                         <div class="carousel-inner Grid-Position-Carousel">
                             <!--Contenedor del participante-->
-                            <div class="carousel-item active opacity-carousel">
+
+                            <?php
+
+                            if (count($todosDiafraces) >0) {
+                              for ($i=0; $i < count($todosDiafraces); $i++) {
+                                // code...
+                                $id = $todosDiafraces[$i][0];
+                                $nombre = $todosDiafraces[$i][1];
+                                $usuario = $todosDiafraces[$i][2];
+                                $imagen = $todosDiafraces[$i][5];
+                                $fecha = $todosDiafraces[$i][4];
+
+																if ($imagen=="") {
+																	$imagen = "getimage.jpg";
+																}
+
+                                if ($i == 0) {
+                                  echo '
+                                  <!--Contenedor del participante-->
+
+                                  <div class="carousel-item active opacity-carousel">
+                                  <div class="Grid-Position-Carousel">
+                                  <div class="opacity-carousel">
+                                  <div class="contenedor-info">
+                                  <p class="nombre shadowText">'.$nombre.'</p>
+                                  <button class="boton-votar votaBaile" data-id="'.$id.'">Votar</button>
+                                  </div>
+                                  </div>
+                                  <img class="img-carousel" src="imagesFTP/'.$imagen.'" alt="...">
+                                  </div>
+                                  </div>
+
+                                  ';
+                                }else{
+                                  echo '
+                                  <div class="carousel-item opacity-carousel">
+                                  <div class="Grid-Position-Carousel">
+                                  <div class="opacity-carousel">
+                                  <div class="contenedor-info">
+                                  <p class="nombre shadowText">'.$nombre.'</p>
+                                  <button class="boton-votar votaBaile" data-id="'.$id.'">Votar</button>
+                                  </div>
+                                  </div>
+                                  <img class="img-carousel" src="imagesFTP/'.$imagen.'" alt="...">
+                                  </div>
+                                  </div>
+                                  ';
+                                }
+                              }
+                            }
+
+
+                            ?>
+                            <!--<div class="carousel-item active opacity-carousel">
                                     <div class="Grid-Position-Carousel">
-                                        <div class="opacity-carousel disfraces">
+                                        <div class="opacity-carousel">
                                             <div class="contenedor-info">
                                                 <p class="nombre shadowText">Nombre del participante</p>
-                                                <button class="boton-votar boton-disfraces">Votar</button>
+                                                <button class="boton-votar">Votar</button>
                                             </div>
                                         </div>
                                         <img class="img-carousel" src="images/PrimerLugar.jpg" alt="...">
                                     </div>
                                 </div>
-                                <!--Contenedor del participante-->
+                                Contenedor del participante
                                 <div class="carousel-item opacity-carousel">
                                     <div class="Grid-Position-Carousel">
-                                        <div class="opacity-carousel disfraces">
+                                        <div class="opacity-carousel">
                                             <div class="contenedor-info">
                                                 <p class="nombre shadowText">Nombre del participante</p>
-                                                <button class="boton-votar boton-disfraces">Votar</button>
+                                                <button class="boton-votar">Votar</button>
                                             </div>
                                         </div>
                                         <img class="img-carousel" src="images/SegundoLugar.jpg" alt="...">
                                     </div>
                                 </div>
-                                <!--Contenedor del participante-->
+
                                 <div class="carousel-item opacity-carousel">
                                     <div class="Grid-Position-Carousel">
-                                        <div class="opacity-carousel disfraces">
+                                        <div class="opacity-carousel">
                                             <div class="contenedor-info">
                                                 <p class="nombre shadowText">Nombre del participante</p>
-                                                <button class="boton-votar boton-disfraces">Votar</button>
+                                                <button class="boton-votar">Votar</button>
                                             </div>
                                         </div>
                                         <img class="img-carousel" src="images/TercerLugar.jpg" alt="...">
                                     </div>
                                 </div>
-                            </div>
+                            </div>-->
                             <!--Controles | Flechas-->
                             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -118,7 +222,7 @@
                 <div class="BoxFooter">
                     <div class="ContainerFooter flex-footer wrap">
                         <!--Icono Home-->
-                        <a class="margin-bottom" href="MiCuenta.html">
+                        <a class="margin-bottom" href="MiCuenta.php">
                             <svg xmlns="http://www.w3.org/2000/svg" width="39.49" height="39.739" viewBox="0 0 39.49 39.739">
                                 <g id="home" transform="translate(-0.183)">
                                   <path id="Trazado_49" data-name="Trazado 49" d="M39.455,18.133,19.927,0,.4,18.133a.681.681,0,0,0,.927,1l2.26-2.1V39.739H36.268V17.032l2.26,2.1a.681.681,0,0,0,.927-1ZM34.907,38.377H4.948V15.768L19.927,1.858,34.907,15.768Z" transform="translate(0)"/>
@@ -127,7 +231,7 @@
                                   <path id="Trazado_52" data-name="Trazado 52" d="M13.182,48.9h9.532V39.365H13.182Zm1.362-8.17h6.809v6.809H14.544Z" transform="translate(-4.148 -12.563)"/>
                                   <path id="Trazado_53" data-name="Trazado 53" d="M40.714,39.365H31.182V48.9h9.532Zm-1.362,8.17H32.544V40.727h6.809Z" transform="translate(-9.893 -12.563)"/>
                                 </g>
-                              </svg>                          
+                              </svg>
                         </a>
                         <!--Icono Disfraces-->
                         <div onclick="buscar()">
@@ -152,13 +256,14 @@
                                         <path id="Trazado_64" data-name="Trazado 64" d="M199.474,85.982a9.328,9.328,0,0,0-8.7-5.982.776.776,0,1,0,0,1.552,7.814,7.814,0,0,1,7.249,4.987.776.776,0,1,0,1.449-.557Z" transform="translate(-190 -80)"/>
                                       </g>
                                     </g>
-                                  </svg>                                                   
+                                  </svg>
                         </div>
                             <div id="buscador">
                                 <form action="">
-                                    <div class="alerta-buscador">Nombre no encontrado</div>
-                                    <input class="input-flex" type="text" placeholder="Nombre del participante">
-                                    <input class="input-flex submit" type="submit" value="Buscar">
+                                    <div class="alerta-buscador" id="alertaRegistro">Nombre no encontrado</div>
+                                    <input class="input-flex" name="nombreequipo" id="nombreequipo" type="text" placeholder="Nombre del participante">
+                                    <input class="input-flex submit" type="button" id="btBuscarBaile" value="Buscar">
+                                    <input class="input-flex submit" type="button" id="btBuscarTodos" value="Mostrar todos">
                                 </form>
                                 <div class="EndPage"></div>
                             </div>
@@ -183,6 +288,7 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!--Mis JS-->
@@ -193,6 +299,7 @@
     </script>
     <script src="js/buscar.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/muertos.js"></script>
 
   </body>
 </html>
