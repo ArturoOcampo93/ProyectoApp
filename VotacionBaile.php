@@ -74,6 +74,7 @@ if($busco){
             <div id="menu">
                     <ul id="aparicion">
                         <li><a class="TextoMenu" href="inscribete.html">- Inscríbete al concurso</a></li>
+                        <li><a class="TextoMenu" href="DisfracesGanadores.html">- Ver Ganadores</a></li>
                         <li><a class="TextoMenu" href="index.html">- Salir</a></li>
                     </ul>
                 </div>
@@ -172,7 +173,7 @@ if($busco){
                                         <div class="opacity-carousel">
                                             <div class="contenedor-info">
                                                 <p class="nombre shadowText">Nombre del participante</p>
-                                                <button class="boton-votar">Votar</button>
+                                                <button class="boton-votar" onclick="window.location.href='ThankYouPage.html'">Votar</button>
                                             </div>
                                         </div>
                                         <img class="img-carousel" src="images/PrimerLugar.jpg" alt="...">
@@ -184,7 +185,7 @@ if($busco){
                                         <div class="opacity-carousel">
                                             <div class="contenedor-info">
                                                 <p class="nombre shadowText">Nombre del participante</p>
-                                                <button class="boton-votar">Votar</button>
+                                                <button class="boton-votar" onclick="window.location.href='ThankYouPage.html'">Votar</button>
                                             </div>
                                         </div>
                                         <img class="img-carousel" src="images/SegundoLugar.jpg" alt="...">
@@ -196,7 +197,7 @@ if($busco){
                                         <div class="opacity-carousel">
                                             <div class="contenedor-info">
                                                 <p class="nombre shadowText">Nombre del participante</p>
-                                                <button class="boton-votar">Votar</button>
+                                                <button class="boton-votar" onclick="window.location.href='ThankYouPage.html'">Votar</button>
                                             </div>
                                         </div>
                                         <img class="img-carousel" src="images/TercerLugar.jpg" alt="...">

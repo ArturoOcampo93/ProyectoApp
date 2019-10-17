@@ -60,6 +60,7 @@ if (isset($_SESSION['muertos']) ) {  //existe la session
             <div id="menu">
                     <ul id="aparicion">
                         <li><a class="TextoMenu" href="inscribete.html">- Inscríbete al concurso</a></li>
+                        <li><a class="TextoMenu" href="DisfracesGanadores.html">- Ver Ganadores</a></li>
                         <li><a class="TextoMenu" href="index.html">- Salir</a></li>
                     </ul>
                 </div>

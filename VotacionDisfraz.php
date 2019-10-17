@@ -79,7 +79,12 @@ if($busco){
             <div id="menu">
                     <ul id="aparicion">
                         <li><a class="TextoMenu" href="inscribete.html">- Inscríbete al concurso</a></li>
+<<<<<<< HEAD:VotacionDisfraz.php
                         <li><a class="TextoMenu" href="javascript:void(0);" onclick="borrar_localstorage()">- Salir</a></li>
+=======
+                        <li><a class="TextoMenu" href="DisfracesGanadores.html">- Ver Ganadores</a></li>
+                        <li><a class="TextoMenu" href="index.html">- Salir</a></li>
+>>>>>>> 1c32911224f851e8fa6d42df6c5bec94fa52d0e4:VotacionDisfraz.html
                     </ul>
                 </div>
             <!--Comienza el GRID-->
@@ -119,6 +124,7 @@ if($busco){
                     <div id="carouselExampleControls" class="carousel slide ContentBox contenedor-carousel" data-ride="carousel">
                         <div class="carousel-inner Grid-Position-Carousel">
                             <!--Contenedor del participante-->
+<<<<<<< HEAD:VotacionDisfraz.php
                             <?php
 
                             if (count($todosDiafraces) >0) {
@@ -166,6 +172,43 @@ if($busco){
 
                             ?>
 
+=======
+                            <div class="carousel-item active opacity-carousel">
+                                    <div class="Grid-Position-Carousel">
+                                        <div class="opacity-carousel disfraces">
+                                            <div class="contenedor-info">
+                                                <p class="nombre shadowText">Nombre del participante</p>
+                                                <button class="boton-votar boton-disfraces" onclick="window.location.href='ThankYouPage.html'">Votar</button>
+                                            </div>
+                                        </div>
+                                        <img class="img-carousel" src="images/PrimerLugar.jpg" alt="...">
+                                    </div>
+                                </div>
+                                <!--Contenedor del participante-->
+                                <div class="carousel-item opacity-carousel">
+                                    <div class="Grid-Position-Carousel">
+                                        <div class="opacity-carousel disfraces">
+                                            <div class="contenedor-info">
+                                                <p class="nombre shadowText">Nombre del participante</p>
+                                                <button class="boton-votar boton-disfraces" onclick="window.location.href='ThankYouPage.html'">Votar</button>
+                                            </div>
+                                        </div>
+                                        <img class="img-carousel" src="images/SegundoLugar.jpg" alt="...">
+                                    </div>
+                                </div>
+                                <!--Contenedor del participante-->
+                                <div class="carousel-item opacity-carousel">
+                                    <div class="Grid-Position-Carousel">
+                                        <div class="opacity-carousel disfraces">
+                                            <div class="contenedor-info">
+                                                <p class="nombre shadowText">Nombre del participante</p>
+                                                <button class="boton-votar boton-disfraces" onclick="window.location.href='ThankYouPage.html'">Votar</button>
+                                            </div>
+                                        </div>
+                                        <img class="img-carousel" src="images/TercerLugar.jpg" alt="...">
+                                    </div>
+                                </div>
+>>>>>>> 1c32911224f851e8fa6d42df6c5bec94fa52d0e4:VotacionDisfraz.html
                             </div>
                             <!--Controles | Flechas-->
                             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
