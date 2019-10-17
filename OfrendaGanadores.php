@@ -149,18 +149,18 @@ $topOfrenda = Usuarios::todosOfrenda();
 														if ($i == 1) {
 															?>
 															<!--Contenedor de Foto de ganadores-->
-                              <div class="Contenedor-Ganadores primerlugar">
+                              <div class="Contenedor-Ganadores segundolugar">
                                   <div class="opacidad-ganadores opacidad-ofrenda">
                                       <p class="Lugares">2º</p>
                                   </div>
-                                  <div id="PrimerLugar" class="overflow">
+                                  <div id="segundoLugar" class="overflow">
                                       <div>
                                           <img src="imagesFTP/<?php echo $imagen; ?>" alt="...">
                                       </div>
                                   </div>
                               </div>
                               <!--Nombre y numero de votos-->
-                              <div class="Nombre-Votos-1">
+                              <div class="Nombre-Votos-2">
                                   <h4><?php echo $nombre; ?></h4>
                                   <p class="text-votos"><?php echo $votos; ?> Votos</p>
                               </div>

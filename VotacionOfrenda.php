@@ -99,6 +99,10 @@ if (isset($_SESSION['muertos']) ) {  //existe la session
                 <!--Carousel-->
                 <div class="BoxContainer">
                     <div id="carouselExampleControls" class="carousel slide ContentBox contenedor-carousel" data-ride="carousel">
+
+                        <!--Alerta de "Ya Votaste"-->
+                        <div class="contenedor-alerta-votacion">¡Ya votaste!</div>
+
                         <div class="carousel-inner Grid-Position-Carousel">
                             <!--Contenedor del participante-->
                             <div class="carousel-item active opacity-carousel">
@@ -154,39 +158,6 @@ if (isset($_SESSION['muertos']) ) {  //existe la session
                                 </g>
                               </svg>
                         </a>
-                        <!--Icono Disfraces-->
-                        <div onclick="buscar()">
-                                <svg id="loupe" xmlns="http://www.w3.org/2000/svg" width="39.739" height="39.739" viewBox="0 0 39.739 39.739">
-                                    <g id="Grupo_39" data-name="Grupo 39" transform="translate(23.284 14.747)">
-                                      <g id="Grupo_38" data-name="Grupo 38">
-                                        <path id="Trazado_61" data-name="Trazado 61" d="M300.776,190a.776.776,0,1,0,.776.776A.776.776,0,0,0,300.776,190Z" transform="translate(-300 -190)"/>
-                                      </g>
-                                    </g>
-                                    <g id="Grupo_41" data-name="Grupo 41">
-                                      <g id="Grupo_40" data-name="Grupo 40">
-                                        <path id="Trazado_62" data-name="Trazado 62" d="M38.829,34.439l-10.36-10.36a15.384,15.384,0,0,0,2.577-8.556A15.523,15.523,0,1,0,15.523,31.046a15.384,15.384,0,0,0,8.556-2.577l2.864,2.864h0l7.5,7.5a3.1,3.1,0,1,0,4.39-4.39ZM23.714,26.834h0a13.985,13.985,0,1,1,3.12-3.12A14.038,14.038,0,0,1,23.714,26.834Zm1.628.7a15.576,15.576,0,0,0,2.195-2.195l2.2,2.2a18.839,18.839,0,0,1-2.195,2.195ZM37.732,37.732a1.551,1.551,0,0,1-2.195,0L28.645,30.84a20.4,20.4,0,0,0,2.195-2.195l6.892,6.892a1.551,1.551,0,0,1,0,2.194Z"/>
-                                      </g>
-                                    </g>
-                                    <g id="Grupo_43" data-name="Grupo 43" transform="translate(3.105 3.105)">
-                                      <g id="Grupo_42" data-name="Grupo 42">
-                                        <path id="Trazado_63" data-name="Trazado 63" d="M52.418,40A12.418,12.418,0,1,0,64.837,52.418,12.432,12.432,0,0,0,52.418,40Zm0,23.284A10.866,10.866,0,1,1,63.284,52.418,10.878,10.878,0,0,1,52.418,63.284Z" transform="translate(-40 -40)"/>
-                                      </g>
-                                    </g>
-                                    <g id="Grupo_45" data-name="Grupo 45" transform="translate(14.747 6.209)">
-                                      <g id="Grupo_44" data-name="Grupo 44">
-                                        <path id="Trazado_64" data-name="Trazado 64" d="M199.474,85.982a9.328,9.328,0,0,0-8.7-5.982.776.776,0,1,0,0,1.552,7.814,7.814,0,0,1,7.249,4.987.776.776,0,1,0,1.449-.557Z" transform="translate(-190 -80)"/>
-                                      </g>
-                                    </g>
-                                  </svg>
-                        </div>
-                            <div id="buscador">
-                                <form action="">
-                                    <div class="alerta-buscador">Nombre no encontrado</div>
-                                    <input class="input-flex" type="text" placeholder="Nombre del participante">
-                                    <input class="input-flex submit" type="submit" value="Buscar">
-                                </form>
-                                <div class="EndPage"></div>
-                            </div>
                     </div>
                 </div>
             </footer>

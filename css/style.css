@@ -262,12 +262,20 @@ li:hover{
     from {height: 0px;}
     to {height: 135px;}
 }
+@keyframes DownGuia {
+    from {height: 0px;}
+    to {height: 370px;}
+}
 @keyframes Up {
     from {height: 135px;}
     to {height: 0px;}
 }
 @keyframes UpFooter {
     from {height: 135px;}
+    to {height: 0px;}
+}
+@keyframes UpGuia {
+    from {height: 370px;}
     to {height: 0px;}
 }
 
@@ -476,7 +484,7 @@ video{
     margin-top: -100px !important;
     display: grid;
     grid-template-columns: 10px auto 10px !important;
-    grid-template-rows: 50px 140px 60px 60px 30px 60px 60px 100px !important;
+    grid-template-rows: 50px 140px 60px 60px 50px 60px 60px 100px !important;
     grid-gap: 15px !important;
 }
 .heading-3{
@@ -539,6 +547,7 @@ input{
     border: none;
     text-align: center;
     padding: 1%;
+    font-size: 12pt;
 
     /* Bordes Redondos */
     border-radius: 40px 40px 40px 40px;
@@ -693,6 +702,7 @@ input{
 .heading-4{
     margin-top: -25px;
     font-size: 30pt;
+    margin-bottom: 0%;
 }
 .contenedor-titulo-flex{
     width: 100%;
@@ -756,14 +766,33 @@ input{
     margin-top: -120px !important;
     display: grid;
     grid-template-columns: 10px auto 10px !important;
-    grid-template-rows: 10px 350px 30px 70px !important;
+    grid-template-rows: 10px 35px 350px 30px 70px !important;
     grid-gap: 15px !important;
 
 }
+.contenedor-alerta-votacion{
+    grid-column-start: 2 !important; 
+    grid-column-end: 3 !important;
+    grid-row-start: 2 !important;
+    grid-row-end: 3 !important;
+
+    background: #E2B600;
+    color: black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Bordes Redondos */
+    border-radius: 40px 40px 40px 40px;
+    -moz-border-radius: 40px 40px 40px 40px;
+    -webkit-border-radius: 40px 40px 40px 40px;
+    border: 0px solid #000000;
+}
 .Grid-Position-Carousel{
     grid-column-start: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
 
     background: white;
     /*background: rgb(249,106,135);
@@ -787,8 +816,8 @@ input{
 .opacity-carousel{
     grid-column-start: 2;
     grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
 
     width: 100%;
     height: 100%;
@@ -859,8 +888,8 @@ input{
 .carousel-control-prev, .carousel-control-next{
     grid-column-start: 2;
     grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
 }
 
 .carousel-inner .carousel-item {
@@ -915,9 +944,6 @@ input{
   .submit:hover{
       background: #3f5efb;
   }
-<<<<<<< HEAD
-=======
-
   /* Thank You Page */
 
   .thankPage{
@@ -1169,4 +1195,106 @@ input{
           display: none;
       }
   }
->>>>>>> 1c32911224f851e8fa6d42df6c5bec94fa52d0e4
+
+  /* Ajustes Finales */
+  .container-preview{
+    width: 100%;
+    height: 130px;
+  }
+  .Ajuste-Preview{
+      width: 92%;
+      height: 130px;
+  }
+  .container-text-preview{
+      width: 100%;
+      padding: 0% 3% 0% 3%;
+  }
+  .text-preview{
+      font-size: 14pt;
+      color: #191719;
+      line-height: 1.2;
+      margin-bottom: 1%;
+  }
+  .text-preview-small{
+      font-size: 10pt;
+  }
+  .resalte{
+      color: #FF012C;
+  }
+  .disfraz-texto{
+      font-weight: 700;
+      color: #00cfc6;
+  }
+  .container-boton-guia{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 3.5%;
+      margin-bottom: 3.5%;
+  }
+  .boton-preview{
+      width: 50%;
+  }
+  #horizontal{
+      border: 1px solid #bebebe;
+  }
+  #Guia{
+      display: none;
+  }
+  #preview{
+      display: none;
+  }
+  @keyframes zoomIn {
+    from {
+      opacity: 0;
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  }
+  
+  .zoomIn {
+    animation-name: zoomIn;
+  }
+  @keyframes zoomOut {
+    from {
+      opacity: 1;
+    }
+  
+    50% {
+      opacity: 0;
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+  
+    to {
+      opacity: 0;
+    }
+  }
+  
+  .zoomOut {
+    animation-name: zoomOut;
+  }
+  .btn-preview{
+    width: 100%;
+    padding: 3%;
+    padding-left: 6%;
+    padding-right: 6%;
+    background: rgb(249,106,135);
+    background: linear-gradient(180deg, rgba(249,106,135,1) 0%, rgba(249,53,92,1) 86%);
+    font-size: 14pt;
+    border: none;
+    color: white;
+  }
+  .NoGuardar{
+      font-size: 12pt;
+  }
+  .NoGuardar:active{
+      background: none !important;
+  }
+.UsuarioTexto{
+    margin-top: 0%;
+    color: white;
+    font-size: 14pt;
+}

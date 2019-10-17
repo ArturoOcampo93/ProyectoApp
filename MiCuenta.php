@@ -93,9 +93,8 @@ if (isset($_SESSION['muertos']) ) {  //existe la session
                         </div>
                         <div class="ContentTitle">
                             <h1 class="shadowText title">Mi cuenta</h1>
-                            <p class="shadowText heading-4">Bienvenido
-                              (<?php echo $usuarioC['usuario']; ?>)
-                            </p>
+                            <p class="shadowText heading-4">Bienvenido</p>
+                            <p class="UsuarioTexto shadowText">(<?php echo $usuarioC['usuario']; ?>)</p>
                         </div>
                     </div>
                 </div>

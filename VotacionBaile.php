@@ -113,6 +113,9 @@ if($busco){
                 <!--Carousel-->
                 <div class="BoxContainer">
                     <div id="carouselExampleControls" class="carousel slide ContentBox contenedor-carousel" data-ride="carousel">
+                        <!--Alerta de "Ya Votaste"-->
+                        <div class="contenedor-alerta-votacion">¡Ya votaste!</div>
+                        
                         <div class="carousel-inner Grid-Position-Carousel">
                             <!--Contenedor del participante-->
 

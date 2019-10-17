@@ -51,6 +51,13 @@
                         <div class="ContentBox Inscripcion-section">
                             <div class="Container-Title">
                                 <h4 class="Titleform">Llena todos los<br>campos para<br>completar el registro</h4>
+
+                                <!--Botón para vizualizar modal | comentar despues de usar -->
+                                <!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                  Launch demo modal
+                                </button>-->
+
+
                             </div>
                                 <div class="input-1">
                                     <input type="text" id="nombre" name="nombre" placeholder="Nombre de tu personaje">
@@ -106,27 +113,51 @@
             </div>
         </div>
 
-        <!-- modal vista previa de la imagen -->
-        <!-- Button trigger modal
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-          Launch demo modal
-        </button>-->
-
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Viste previa</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Vista Previa</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+          <span class="NoGuardar" aria-hidden="true">Subir otra foto</span>
         </button>
       </div>
       <div class="modal-body">
-        <div id="imagen01"><img class="img-fluid" src="imagesFTP/prueba.jpg" alt="vista previa"> </div>
+
+        <!--<div id="imagen01">
+          <img class="img-fluid" src="imagesFTP/prueba.jpg" alt="vista previa">
+        </div>-->
+        <div class="container-text-preview">
+          <p class="text-preview">Así es como todos verán tu foto.</p>
+          <p class="text-preview-small">Para una mejor foto consulta nuestra <a class="resalte" href="#" onclick="GuiaFoto()">guía</a>.</p>
+        </div>
+        <div class="container-preview">
+          <div class="opacidad-ganadores opacidad-disfraz Ajuste-Preview">
+              <p class="Lugares">1º</p>
+            </div>
+            <div id="PrimerLugar" class="overflow">
+              <div id="imagen01">
+                  <img class="img-fluid" src="imagesFTP/prueba.jpg" alt="vista previa">
+              </div>
+            </div>
+        </div>
+        <div id="Guia">
+          <div id="preview">
+            <hr id="horizontal">
+            <h2>Guía</h2>
+            <p>Al tomar tu foto debes tener en cuenta que sólo se verá la <span class="disfraz-texto">zona central:</span></p>
+            <img src="images/guiafoto.png" alt="Guia">
+            <div class="container-boton-guia">
+              <button class="boton-preview" onclick="GuiaFoto()">Cerrar guía</button>
+            </div>
+          </div>
+        </div>
+
+
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn-preview" data-dismiss="modal">Guardar foto & Cerrar</button>
 
       </div>
     </div>
@@ -141,6 +172,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!--Mis JS-->
+    <script src="js/guia.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/muertos.js"></script>
 
