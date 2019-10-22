@@ -1000,7 +1000,7 @@ input{
       background: linear-gradient(0deg, rgba(63,94,251,0.87718837535014) 0%, rgba(252,70,107,0.7483368347338936) 86%);
   }
   .contenedor-ganadores{
-    min-width: 1500px;
+    min-width: 1200px;
     margin-top: 160px;
     height: auto;
     padding: 1%;
@@ -1022,10 +1022,20 @@ input{
     -moz-box-shadow: -4px -10px 17px -2px rgba(0,0,0,0.46);
     box-shadow: -4px -10px 17px -2px rgba(0,0,0,0.46);
   }
+  .pantalla{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    grid-gap: 15px;
+}
+.opacidad-pantalla{
+    width: 100% !important;
+    height: 100% !important;
+}
   .cont-disfraz, .cont-baile{
     display: grid;
     grid-template-columns: 10px auto 10px;
-    grid-template-rows:150px 150px 70px 150px 70px 150px 70px; 
+    grid-template-rows:150px 130px 60px 130px 60px 130px 70px; 
     grid-gap: 15px;
 
     -webkit-box-shadow: 10px 0px 10px -10px rgba(0,0,0,0.5);
@@ -1035,7 +1045,7 @@ input{
   .cont-ofrenda{
     display: grid;
     grid-template-columns: 10px auto 10px;
-    grid-template-rows:150px 150px 70px 150px 70px 150px 70px; 
+    grid-template-rows:150px 130px 60px 130px 60px 130px 70px; 
     grid-gap: 15px;
   }
   .titulo-ganadores-pantalla{
@@ -1183,7 +1193,7 @@ input{
 .Responsive-2{
     display: none;
 }
-@media only screen and (max-width: 1570px) {
+@media only screen and (max-width: 1302px) {
 
       .Responsive-2{
           display: block;
