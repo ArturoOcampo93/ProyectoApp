@@ -430,7 +430,7 @@ video{
 .Lugares{
     margin: 0%;
     padding: 0%;
-    font-size: 60pt;
+    font-size: 50pt;
     color: white;
 }
 .Nombre-Votos-1{
@@ -458,6 +458,7 @@ video{
     text-align: center;
 }
 .text-votos{
+    font-weight: 200;
     margin-top: 0%;
 }
 .primerlugar{
@@ -1001,7 +1002,7 @@ input{
   }
   .contenedor-ganadores{
     min-width: 1200px;
-    margin-top: 160px;
+    margin-top: 115px;
     height: auto;
     padding: 1%;
     background: #ffffff;
@@ -1035,7 +1036,7 @@ input{
   .cont-disfraz, .cont-baile{
     display: grid;
     grid-template-columns: 10px auto 10px;
-    grid-template-rows:150px 150px 70px 150px 70px 150px 70px;
+    grid-template-rows:115px 120px 30px 120px 30px 120px 70px;
     grid-gap: 15px;
 
     -webkit-box-shadow: 10px 0px 10px -10px rgba(0,0,0,0.5);
@@ -1045,7 +1046,7 @@ input{
   .cont-ofrenda{
     display: grid;
     grid-template-columns: 10px auto 10px;
-    grid-template-rows:150px 130px 60px 130px 60px 130px 70px;
+    grid-template-rows:115px 120px 30px 120px 30px 120px 70px;
     grid-gap: 15px;
   }
   .titulo-ganadores-pantalla{
@@ -1059,18 +1060,21 @@ input{
     align-items: center;
   }
   .TituloDisfraces{
+      font-size: 24pt;
       margin-left: 4%;
       margin-bottom: 0%;
       letter-spacing: 4px;
       color: #00cfc6;
   }
   .TituloBaile{
+    font-size: 24pt;
     margin-left: 4%;
     margin-bottom: 0%;
     letter-spacing: 4px;
     color: #FF012C;
 }
 .TituloOfrenda{
+    font-size: 24pt;
     margin-left: 4%;
     margin-bottom: 0%;
     letter-spacing: 4px;
@@ -1185,7 +1189,7 @@ input{
     width: 100%;
     color: white;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 10px;
     font-size: 50pt;
     font-family: "western_swaggerregular",sans-serif;
     letter-spacing: 6px;
