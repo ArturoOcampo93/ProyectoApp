@@ -1,6 +1,8 @@
 //Modal
 $(document).ready(function(){
 
+	$("#votasteerror").hide();
+
 	$(window).keydown(function(event){
     if(event.keyCode == 13) {
       event.preventDefault();
@@ -61,7 +63,8 @@ $(document).ready(function(){
 				// reset form
 				window.location='DisfracesGanadores.php';
 			}else{
-				alert(json.error_msg);
+				$("#votasteerror").show('slow/400/fast');
+				setTimeout(cierraError, 1000);
 				return false;
 			}
 		});
@@ -87,7 +90,8 @@ $(document).ready(function(){
 				// reset form
 				window.location='BaileGanadores.php';
 			}else{
-				alert(json.error_msg);
+				$("#votasteerror").show('slow/400/fast');
+				setTimeout(cierraError, 1000);
 				return false;
 			}
 		});
@@ -366,7 +370,8 @@ closeFormDisfraz();
 					// reset form
 					window.location='OfrendaGanadores.php';
 				}else{
-					alert(json.error_msg);
+					$("#votasteerror").show('slow/400/fast');
+					setTimeout(cierraError, 1000);
 					return false;
 				}
 			});
@@ -446,6 +451,10 @@ function closeFormDisfraz(){
 	}
 }
 
+
+function cierraError(){
+	$("#votasteerror").hide('slow/400/fast');
+}
 
 //local storage
 function guardar_localstorage(miCorreo){
