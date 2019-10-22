@@ -15,7 +15,7 @@ class dbMySQL{
 	private $usuario = "tvp_muertos";
 	private $clave = 'BRPEW$)PbRPx';
 	private $db = "tvp_muertos";
-	private $conn;
+	private $conn;*/
 
 
 	//conexion a base de datos

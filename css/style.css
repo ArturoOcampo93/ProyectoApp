@@ -362,7 +362,7 @@ video{
     margin-top: -150px !important;
     display: grid;
     grid-template-columns: 10px auto 10px !important;
-    grid-template-rows: 50px 110px 130px 80px 130px !important;
+    grid-template-rows: 50px 110px 130px 80px 130px 150px !important;
     grid-gap: 15px !important;
 }
 .Icono-Titulo{
@@ -771,7 +771,7 @@ input{
 
 }
 .contenedor-alerta-votacion{
-    grid-column-start: 2 !important; 
+    grid-column-start: 2 !important;
     grid-column-end: 3 !important;
     grid-row-start: 2 !important;
     grid-row-end: 3 !important;
@@ -965,7 +965,7 @@ input{
     align-items: stretch;
   }
   .titulo-gracias{
-      text-align:center; 
+      text-align:center;
       font-size: 30pt;
       margin: 0%;
   }
@@ -1025,7 +1025,7 @@ input{
   .cont-disfraz, .cont-baile{
     display: grid;
     grid-template-columns: 10px auto 10px;
-    grid-template-rows:150px 150px 70px 150px 70px 150px 70px; 
+    grid-template-rows:150px 150px 70px 150px 70px 150px 70px;
     grid-gap: 15px;
 
     -webkit-box-shadow: 10px 0px 10px -10px rgba(0,0,0,0.5);
@@ -1035,7 +1035,7 @@ input{
   .cont-ofrenda{
     display: grid;
     grid-template-columns: 10px auto 10px;
-    grid-template-rows:150px 150px 70px 150px 70px 150px 70px; 
+    grid-template-rows:150px 150px 70px 150px 70px 150px 70px;
     grid-gap: 15px;
   }
   .titulo-ganadores-pantalla{
@@ -1103,10 +1103,10 @@ input{
     border-radius: 40px 40px 40px 40px;
     -moz-border-radius: 40px 40px 40px 40px;
     -webkit-border-radius: 40px 40px 40px 40px;
-    border: 0px solid #000000;  
+    border: 0px solid #000000;
 }
 .primer-lugar{
-    grid-column-start: 2; 
+    grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 4;
@@ -1132,10 +1132,10 @@ input{
     border-radius: 40px 40px 40px 40px;
     -moz-border-radius: 40px 40px 40px 40px;
     -webkit-border-radius: 40px 40px 40px 40px;
-    border: 0px solid #000000;  
+    border: 0px solid #000000;
 }
 .segundo-lugar{
-    grid-column-start: 2; 
+    grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 5;
     grid-row-end: 6;
@@ -1161,10 +1161,10 @@ input{
     border-radius: 40px 40px 40px 40px;
     -moz-border-radius: 40px 40px 40px 40px;
     -webkit-border-radius: 40px 40px 40px 40px;
-    border: 0px solid #000000;  
+    border: 0px solid #000000;
 }
 .tercer-lugar{
-    grid-column-start: 2; 
+    grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 7;
     grid-row-end: 8;
@@ -1249,12 +1249,12 @@ input{
       opacity: 0;
       transform: scale3d(0.3, 0.3, 0.3);
     }
-  
+
     50% {
       opacity: 1;
     }
   }
-  
+
   .zoomIn {
     animation-name: zoomIn;
   }
@@ -1262,17 +1262,17 @@ input{
     from {
       opacity: 1;
     }
-  
+
     50% {
       opacity: 0;
       transform: scale3d(0.3, 0.3, 0.3);
     }
-  
+
     to {
       opacity: 0;
     }
   }
-  
+
   .zoomOut {
     animation-name: zoomOut;
   }
@@ -1308,24 +1308,24 @@ input{
     20% {
       transform: rotate3d(0, 0, 1, 15deg);
     }
-  
+
     40% {
       transform: rotate3d(0, 0, 1, -10deg);
     }
-  
+
     60% {
       transform: rotate3d(0, 0, 1, 5deg);
     }
-  
+
     80% {
       transform: rotate3d(0, 0, 1, -5deg);
     }
-  
+
     to {
       transform: rotate3d(0, 0, 1, 0deg);
     }
   }
-  
+
   .swing {
     transform-origin: top center;
     animation-name: swing;
