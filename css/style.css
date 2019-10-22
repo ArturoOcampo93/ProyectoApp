@@ -1045,7 +1045,7 @@ input{
   .cont-ofrenda{
     display: grid;
     grid-template-columns: 10px auto 10px;
-    grid-template-rows:150px 130px 60px 130px 60px 130px 70px; 
+    grid-template-rows:150px 130px 60px 130px 60px 130px 70px;
     grid-gap: 15px;
   }
   .titulo-ganadores-pantalla{
@@ -1193,7 +1193,7 @@ input{
 .Responsive-2{
     display: none;
 }
-@media only screen and (max-width: 1302px) {
+@media only screen and (max-width: 1000px) {
 
       .Responsive-2{
           display: block;
