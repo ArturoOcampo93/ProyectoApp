@@ -1036,11 +1036,7 @@ input{
   .cont-disfraz, .cont-baile{
     display: grid;
     grid-template-columns: 10px auto 10px;
-<<<<<<< HEAD
     grid-template-rows:115px 120px 30px 120px 30px 120px 70px; 
-=======
-    grid-template-rows:150px 150px 70px 150px 70px 150px 70px;
->>>>>>> 0a100a6a8dc8d11138a8e8ad84fab41114d142f8
     grid-gap: 15px;
 
     -webkit-box-shadow: 10px 0px 10px -10px rgba(0,0,0,0.5);
