@@ -126,7 +126,8 @@ if($busco){
                                 // code...
                                 $id = $todosDiafraces[$i][0];
                                 $nombre = $todosDiafraces[$i][1];
-                                $usuario = $todosDiafraces[$i][2];
+                                //$usuario = $todosDiafraces[$i][2];
+                                $categoria = $todosDiafraces[$i][2];
                                 $imagen = $todosDiafraces[$i][5];
                                 $fecha = $todosDiafraces[$i][4];
 
@@ -142,7 +143,7 @@ if($busco){
                                   <div class="Grid-Position-Carousel">
                                   <div class="opacity-carousel">
                                   <div class="contenedor-info">
-                                  <p class="nombre shadowText">'.$nombre.'</p>
+                                  <p class="nombre shadowText">'.$nombre.'('.$categoria.')</p>
                                   <button class="boton-votar votaBaile" data-id="'.$id.'">Votar</button>
                                   </div>
                                   </div>
@@ -157,7 +158,7 @@ if($busco){
                                   <div class="Grid-Position-Carousel">
                                   <div class="opacity-carousel">
                                   <div class="contenedor-info">
-                                  <p class="nombre shadowText">'.$nombre.'</p>
+                                  <p class="nombre shadowText">'.$nombre.'('.$categoria.')</p>
                                   <button class="boton-votar votaBaile" data-id="'.$id.'">Votar</button>
                                   </div>
                                   </div>

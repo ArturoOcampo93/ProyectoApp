@@ -71,6 +71,7 @@ if (isset($_POST['id']) && isset($usuarioC['usuario'])) {
 				$response["error_msg"]="Solo puedes votar una vez.";
 			}else{
 				$response["error_msg"]="Felicidades tu boto se registro exitosamente.";
+				$data['categoria'] = Usuarios::categoria($data['id']);
 				Usuarios::botoBaile($data);
 
 				$existe=Usuarios::cuantosBotosBaile($usuarioC['usuario']);

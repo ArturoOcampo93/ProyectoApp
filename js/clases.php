@@ -15,7 +15,7 @@ class dbMySQL{
 	private $usuario = "tvp_muertos";
 	private $clave = 'BRPEW$)PbRPx';
 	private $db = "tvp_muertos";
-	private $conn;*/
+	private $conn;
 
 
 	//conexion a base de datos
@@ -251,7 +251,7 @@ class Usuarios{
 	//primeros lugares disfraz
 	public static function topDisfraces(){
 		$db = new dbMySQL();
-		$dateReg = $db->query2("SELECT COUNT(*) cuantos, `cDisfraz` FROM `tbl_botodisfraz` GROUP BY `cDisfraz` ORDER BY cuantos LIMIT 3");
+		$dateReg = $db->query2("SELECT COUNT(*) cuantos, `cDisfraz` FROM `tbl_botodisfraz` GROUP BY `cDisfraz` ORDER BY cuantos DESC LIMIT 3");
 		$db->close();
 		unset($db);
 
@@ -298,7 +298,7 @@ class Usuarios{
 	//bota baile
 	public static function botoBaile($data){
 		$db = new dbMySQL();
-		$dateReg = $db->query("INSERT INTO `tbl_botobaile` (`nId`, `cUsuario`,`cEquipo`,`cFecha`) VALUES (NULL, '".$data['usuario']."','".$data['id']."','".$data['fecha']."');");
+		$dateReg = $db->query("INSERT INTO `tbl_botobaile` (`nId`, `cUsuario`,`cEquipo`,`cFecha`, `cCategoria`) VALUES (NULL, '".$data['usuario']."','".$data['id']."','".$data['fecha']."','".$data['categoria']."');");
 		$db->close();
 		unset($db);
 
@@ -329,7 +329,7 @@ class Usuarios{
 //primeros lugares baile
 public static function topBailes(){
 	$db = new dbMySQL();
-	$dateReg = $db->query2("SELECT COUNT(*) cuantos, `cEquipo` FROM `tbl_botobaile` GROUP BY `cEquipo` ORDER BY cuantos LIMIT 3");
+	$dateReg = $db->query2("SELECT COUNT(*) cuantos, `cEquipo` FROM `tbl_botobaile` GROUP BY `cEquipo` ORDER BY cuantos DESC LIMIT 3");
 	$db->close();
 	unset($db);
 
@@ -392,13 +392,25 @@ public static function cuantosVotosOfrenda($usuarioB){
 //primeros lugares ofrenda
 public static function todosOfrenda(){
 	$db = new dbMySQL();
-	$dateReg = $db->query2("SELECT COUNT(*) cuantos, `cOfrenda` FROM `tbl_votoofrenda` GROUP BY `cOfrenda` ORDER BY cuantos LIMIT 2");
+	$dateReg = $db->query2("SELECT COUNT(*) cuantos, `cOfrenda` FROM `tbl_votoofrenda` GROUP BY `cOfrenda` ORDER BY cuantos DESC LIMIT 2");
 	$db->close();
 	unset($db);
 
 	return $dateReg;
 }
 //termina primeros lugares ofrenda
+
+
+//trae categoria
+public static function categoria($id){
+	$db = new dbMySQL();
+	$dateReg = $db->query("SELECT `cCategoria` FROM `tbl_baile` WHERE `nId`=".$id);
+	$db->close();
+	unset($db);
+
+	return $dateReg[0];
+}
+//termina trae categoria
 
 }  //termina funciones de usuario
 
