@@ -1344,3 +1344,52 @@ input{
     transform-origin: top center;
     animation-name: swing;
   }
+
+  /* Modal star raiting */ 
+  .ContainerStars{
+    width: 100%;
+    height: auto;
+    margin-bottom: 10%;
+  }
+  .ContainerStars form {
+    width: 100%;
+    margin: 0 auto;
+    height: 50px;
+  }
+  
+  .ContainerStars form p {
+    text-align: center;
+  }
+  
+  .ContainerStars form label {
+    font-size: 40px;
+    padding: 2%;
+  }
+  
+  .clasificacion input[type="radio"] {
+    display: none;
+  }
+  
+  .clasificacion label {
+    color: grey;
+  }
+  
+  .clasificacion {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+  }
+  
+  .clasificacion label:hover,
+  .clasificacion label:hover ~ label {
+    color: orange;
+  }
+  
+  .clasificacion input[type="radio"]:checked ~ label {
+    color: orange;
+  }
+  .nombre-participante{
+      width: 100%;
+      text-align: center;
+      font-weight: 400;
+      font-size: 14pt;
+  }

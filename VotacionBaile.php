@@ -144,7 +144,7 @@ if($busco){
                                   <div class="opacity-carousel">
                                   <div class="contenedor-info">
                                   <p class="nombre shadowText">'.$nombre.'('.$categoria.')</p>
-                                  <button class="boton-votar votaBaile" data-id="'.$id.'">Votar</button>
+                                  <button class="boton-votar votaBaile" data-id="'.$id.'" data-toggle="modal" data-target="#Calificar">Calificar</button>
                                   </div>
                                   </div>
                                   <img class="img-carousel" src="imagesFTP/'.$imagen.'" alt="...">
@@ -159,7 +159,7 @@ if($busco){
                                   <div class="opacity-carousel">
                                   <div class="contenedor-info">
                                   <p class="nombre shadowText">'.$nombre.'('.$categoria.')</p>
-                                  <button class="boton-votar votaBaile" data-id="'.$id.'">Votar</button>
+                                  <button class="boton-votar votaBaile" data-id="'.$id.'" data-toggle="modal" data-target="#Calificar">Calificar</button>
                                   </div>
                                   </div>
                                   <img class="img-carousel" src="imagesFTP/'.$imagen.'" alt="...">
@@ -287,6 +287,46 @@ if($busco){
                     </div>
                 </div>
                 <img src="images/BackgroundAnimas.png" alt="Background Animas">
+            </div>
+        </div>
+
+
+        <!-- Modal Star Raiting-->
+        <div class="modal fade" id="Calificar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Califica al participante</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <h4 class="nombre-participante">Nombre del participante</h4>
+                    
+                    <!--Star Raiting-->
+                        <div class="ContainerStars">
+                            
+                            <form action="">
+                                <p class="clasificacion">
+                                    <input id="radio1" type="radio" name="estrellas" value="5">
+                                    <label for="radio1">★</label>
+                                    <input id="radio2" type="radio" name="estrellas" value="4">
+                                    <label for="radio2">★</label>
+                                    <input id="radio3" type="radio" name="estrellas" value="3">
+                                    <label for="radio3">★</label>
+                                    <input id="radio4" type="radio" name="estrellas" value="2">
+                                    <label for="radio4">★</label>
+                                    <input id="radio5" type="radio" name="estrellas" value="1">
+                                    <label for="radio5">★</label>
+                                </p>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="submit" data-dismiss="modal" value="Registrar Voto">
+                </form>
+                </div>
+            </div>
             </div>
         </div>
 
