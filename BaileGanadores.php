@@ -126,7 +126,7 @@ $topBailes = Usuarios::topBailes($categoria);
                                 <h2>Concurso de baile <span class="tipoCategoria">(<?php echo $categoria; ?>)</span> </h2>
                             </div>
 														<div class="size-3">
-															<button id="cambiaCategoria" onclick="window.location.href='BaileGanadores.php?categoria=<?php echo $siguiente; ?>'">Ver categoria <?php echo $siguiente; ?></button>
+															<button id="cambiaCategoria" class="totalsize margin-top" onclick="window.location.href='BaileGanadores.php?categoria=<?php echo $siguiente; ?>'">Ver categoria <?php echo $siguiente; ?></button>
 														</div>
                         </div>
 

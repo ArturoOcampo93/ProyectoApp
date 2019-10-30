@@ -107,12 +107,12 @@ if (isset($_SESSION['muertos']) ) {  //existe la session
                             <p>Recuerda que sólo tienes una oportunidad para votar</p>
                         </div>
                         <div class="contenedor-botones-flex">
-                            <button id="disfraces" onclick="window.location.href='VotacionDisfraz.php'">Concurso de disfraces</button>
+                            <button id="disfraces" class="totalsize" onclick="window.location.href='VotacionDisfraz.php'">Concurso de disfraces</button>
 
                             <?php if ($existe['jurado'] == "baile") { ?>
-															<button id="baile" onclick="window.location.href='VotacionBaile.php'">Concurso de baile</button>
+															<button id="baile" class="totalsize" onclick="window.location.href='VotacionBaile.php'">Concurso de baile</button>
 													<?php } if ($existe['jurado'] == "ofrenda") { ?>
-                            <button id="ofrenda" onclick="window.location.href='VotacionOfrenda.php'">Concurso de la ofrenda</button>
+                            <button id="ofrenda" class="totalsize" onclick="window.location.href='VotacionOfrenda.php'">Concurso de la ofrenda</button>
 													<?php } ?>
 
 
