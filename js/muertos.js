@@ -280,7 +280,7 @@ closeFormDisfraz();
 			//contrasena
 			var nombre = $.trim($("#nombre").val());
 			if (nombre.length == 0 ) {
-				$("#alerta-inscripcion").html("Debe proporcionar su nombre del persoanje.");
+				$("#alerta-inscripcion").html("Debe proporcionar su nombre del personaje.");
 				DisclaimerFormDisfraz();
 				return false;
 			}
