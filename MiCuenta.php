@@ -93,7 +93,7 @@ if (isset($_SESSION['muertos']) ) {  //existe la session
                         </div>
                         <div class="ContentTitle">
                             <h1 class="shadowText title">Mi cuenta</h1>
-                            <p class="shadowText heading-4">Bienvenido</p>
+                            <p class="shadowText heading-4">Bienvenid@</p>
                             <p class="UsuarioTexto shadowText">(<?php echo $usuarioC['usuario']; ?>)</p>
                         </div>
                     </div>
@@ -108,10 +108,12 @@ if (isset($_SESSION['muertos']) ) {  //existe la session
                         </div>
                         <div class="contenedor-botones-flex">
                             <button id="disfraces" onclick="window.location.href='VotacionDisfraz.php'">Concurso de disfraces</button>
-                            <?php if ($existe['jurado'] == "ok") { ?>
-                              <button id="baile" onclick="window.location.href='VotacionBaile.php'">Concurso de baile</button>
-                            <?php } ?>
+
+                            <?php if ($existe['jurado'] == "baile") { ?>
+															<button id="baile" onclick="window.location.href='VotacionBaile.php'">Concurso de baile</button>
+													<?php } if ($existe['jurado'] == "ofrenda") { ?>
                             <button id="ofrenda" onclick="window.location.href='VotacionOfrenda.php'">Concurso de la ofrenda</button>
+													<?php } ?>
 
 
                         </div>

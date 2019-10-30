@@ -65,16 +65,16 @@ if (isset($_POST['id']) && isset($usuarioC['usuario'])) {
 		//guarda registro
 		if($valid){
 			//si el codigo aun no esta registrado primero guardo registro
-			$existe=Usuarios::cuantosBotosBaile($usuarioC['usuario']);
+			$existe=Usuarios::cuantosBotosBaile($usuarioC['usuario'], $data['id']);
 			if($existe > 0){
 				//ya existe el usuario
-				$response["error_msg"]="Solo puedes votar una vez.";
+				$response["error_msg"]="Solo puedes calificar una vez cada pareja o equipo.";
 			}else{
-				$response["error_msg"]="Felicidades tu boto se registro exitosamente.";
+				$response["error_msg"]="Felicidades tu calificacion se registro exitosamente.";
 				$data['categoria'] = Usuarios::categoria($data['id']);
 				Usuarios::botoBaile($data);
 
-				$existe=Usuarios::cuantosBotosBaile($usuarioC['usuario']);
+				$existe=Usuarios::cuantosBotosBaile($usuarioC['usuario'], $data['id']);
 				//print_r($existe);
 				if($existe > 0){
 					$response["success"]=1;

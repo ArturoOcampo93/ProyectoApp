@@ -83,9 +83,7 @@ class Usuarios{
 
 		$cuantos = $data[0];
 
-
 		if($cuantos>=1){
-
 			$respuest=array("encontrado"=>"si");
 		}else{
 			$respuest=array("encontrado"=>"no","err"=>"Este usuario no existe.");
@@ -298,7 +296,7 @@ class Usuarios{
 	//bota baile
 	public static function botoBaile($data){
 		$db = new dbMySQL();
-		$dateReg = $db->query("INSERT INTO `tbl_botobaile` (`nId`, `cUsuario`,`cEquipo`,`cFecha`, `cCategoria`) VALUES (NULL, '".$data['usuario']."','".$data['id']."','".$data['fecha']."','".$data['categoria']."');");
+		$dateReg = $db->query("INSERT INTO `tbl_botobaile` (`nId`, `cUsuario`,`cEquipo`,`cFecha`, `cCategoria`, `cPuntos`) VALUES (NULL, '".$data['usuario']."','".$data['id']."','".$data['fecha']."','".$data['categoria']."','".$data['calificacion']."');");
 		$db->close();
 		unset($db);
 
@@ -307,9 +305,9 @@ class Usuarios{
 	//termina bota baile
 
 	//numero botos baile
-	public static function cuantosBotosBaile($usuarioB){
+	public static function cuantosBotosBaile($usuarioB, $id){
 		$db = new dbMySQL();
-		$dateReg = $db->query("SELECT COUNT(*) cuantos FROM `tbl_botobaile` WHERE `cUsuario`='".$usuarioB."'");
+		$dateReg = $db->query("SELECT COUNT(*) cuantos FROM `tbl_botobaile` WHERE `cUsuario`='".$usuarioB."' AND `cEquipo`='".$id."'");
 		$db->close();
 		unset($db);
 
@@ -327,9 +325,21 @@ class Usuarios{
 	}
 
 //primeros lugares baile
-public static function topBailes(){
+public static function topBailes($categoria){
 	$db = new dbMySQL();
-	$dateReg = $db->query2("SELECT COUNT(*) cuantos, `cEquipo` FROM `tbl_botobaile` GROUP BY `cEquipo` ORDER BY cuantos DESC LIMIT 3");
+	$dateReg = $db->query2("SELECT SUM(`cPuntos`) puntos, `cEquipo` FROM `tbl_botobaile` WHERE `cCategoria` = '".$categoria."'  GROUP BY `cEquipo` ORDER BY puntos DESC LIMIT 3 ");
+	$db->close();
+	unset($db);
+
+	return $dateReg;
+}
+//termina primeros lugares baile
+
+
+//primeros lugares baile
+public static function topBailesTodos(){
+	$db = new dbMySQL();
+	$dateReg = $db->query2("SELECT SUM(`cPuntos`) puntos, `cEquipo` FROM `tbl_botobaile`  GROUP BY `cEquipo` ORDER BY puntos DESC LIMIT 3 ");
 	$db->close();
 	unset($db);
 

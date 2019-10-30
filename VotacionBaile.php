@@ -113,8 +113,7 @@ if($busco){
                 <!--Carousel-->
                 <div class="BoxContainer">
                     <div id="carouselExampleControls" class="carousel slide ContentBox contenedor-carousel" data-ride="carousel">
-                        <!--Alerta de "Ya Votaste"-->
-                        <div class="contenedor-alerta-votacion" id="votasteerror">¡Ya votaste!</div>
+
 
                         <div class="carousel-inner Grid-Position-Carousel">
                             <!--Contenedor del participante-->
@@ -144,7 +143,7 @@ if($busco){
                                   <div class="opacity-carousel">
                                   <div class="contenedor-info">
                                   <p class="nombre shadowText">'.$nombre.'('.$categoria.')</p>
-                                  <button class="boton-votar votaBaile" data-id="'.$id.'" data-toggle="modal" data-target="#Calificar">Calificar</button>
+                                  <button class="boton-votar votaBaile" data-id="'.$id.'" data-nombre="'.$nombre.'" >Calificar</button>
                                   </div>
                                   </div>
                                   <img class="img-carousel" src="imagesFTP/'.$imagen.'" alt="...">
@@ -159,7 +158,7 @@ if($busco){
                                   <div class="opacity-carousel">
                                   <div class="contenedor-info">
                                   <p class="nombre shadowText">'.$nombre.'('.$categoria.')</p>
-                                  <button class="boton-votar votaBaile" data-id="'.$id.'" data-toggle="modal" data-target="#Calificar">Calificar</button>
+                                  <button class="boton-votar votaBaile" data-id="'.$id.'" data-nombre="'.$nombre.'" >Calificar</button>
                                   </div>
                                   </div>
                                   <img class="img-carousel" src="imagesFTP/'.$imagen.'" alt="...">
@@ -302,11 +301,14 @@ if($busco){
                 </button>
                 </div>
                 <div class="modal-body">
-                    <h4 class="nombre-participante">Nombre del participante</h4>
-                    
+                    <h4 class="nombre-participante" id="nombrepart" >Nombre del participante</h4>
+										<input type="hidden" name="id" id="id">
+										<!--Alerta de "Ya Votaste"-->
+										<div class="contenedor-alerta-votacion" id="votasteerror">¡Ya votaste!</div>
+
                     <!--Star Raiting-->
                         <div class="ContainerStars">
-                            
+
                             <form action="">
                                 <p class="clasificacion">
                                     <input id="radio1" type="radio" name="estrellas" value="5">
@@ -323,7 +325,7 @@ if($busco){
                         </div>
                 </div>
                 <div class="modal-footer">
-                    <input type="submit" class="submit" data-dismiss="modal" value="Registrar Voto">
+                    <input type="button" class="submit" data-dismiss="modal" id="btCalifica" value="Registrar Voto">
                 </form>
                 </div>
             </div>
