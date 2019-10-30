@@ -33,8 +33,31 @@ if (isset($_SESSION['muertos']) ) {  //existe la session
 	exit(0);
 }  //termina session
 
+
+$categoria = "";
+$siguiente = "";
+if (isset($_GET['categoria'])) {
+  // code...
+  $categoria = $_GET['categoria'];
+  if ($categoria == "") {
+    // code...
+    $categoria = "pareja";
+    $siguiente = "equipo";
+  }else{
+    if ($categoria == "pareja") {
+      $siguiente = "equipo";
+    }else{
+      $siguiente = "pareja";
+    }
+  }
+}else{
+  $categoria = "pareja";
+	$siguiente = "equipo";
+}
+
+
 //top ganadores
-$topBailes = Usuarios::topBailes();
+$topBailes = Usuarios::topBailes($categoria);
 
 
 ?>
@@ -87,7 +110,7 @@ $topBailes = Usuarios::topBailes();
                 <div class="BoxContainer">
                     <div class="ContentBox Ganadores-section">
                         <div class="Icono-Titulo">
-                            <div class="center">
+                            <div class="center size-1">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="94.747" height="101.151" viewBox="0 0 94.747 101.151">
                                         <g id="Grupo_20" data-name="Grupo 20" transform="translate(165 110)">
                                           <g id="dance_1_" data-name="dance (1)" transform="translate(-165 -110)">
@@ -99,9 +122,12 @@ $topBailes = Usuarios::topBailes();
                                         </g>
                                       </svg>
                             </div>
-                            <div>
-                                <h2>Concurso de baile</h2>
+                            <div class="size-2">
+                                <h2>Concurso de baile <span class="tipoCategoria">(<?php echo $categoria; ?>)</span> </h2>
                             </div>
+														<div class="size-3">
+															<button id="cambiaCategoria" onclick="window.location.href='BaileGanadores.php?categoria=<?php echo $siguiente; ?>'">Ver categoria <?php echo $siguiente; ?></button>
+														</div>
                         </div>
 
                         <?php
@@ -186,6 +212,7 @@ $topBailes = Usuarios::topBailes();
                           }
                         }
                         ?>
+
 
 
 

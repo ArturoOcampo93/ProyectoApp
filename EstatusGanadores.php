@@ -1,12 +1,33 @@
 <?php
 require_once("js/clases.php");
 
+$categoria = "";
+$siguiente = "";
+if (isset($_GET['categoria'])) {
+  // code...
+  $categoria = $_GET['categoria'];
+  if ($categoria == "") {
+    // code...
+    $categoria = "pareja";
+    $siguiente = "equipo";
+  }else{
+    if ($categoria == "pareja") {
+      $siguiente = "equipo";
+    }else{
+      $siguiente = "pareja";
+    }
+  }
+}else{
+  $categoria = "pareja";
+  $siguiente = "equipo";
+}
+
 //votos ofrenda
 $topOfrenda = Usuarios::todosOfrenda();
 //top disfraces
 $topdisfraces = Usuarios::topDisfraces();
 //top bailes
-$topBailes = Usuarios::topBailes();
+$topBailes = Usuarios::topBailes($categoria);
 
 ?>
 <!doctype html>
@@ -155,7 +176,7 @@ $topBailes = Usuarios::topBailes();
                               </svg>
 
 
-                        <h3 class="TituloBaile">Concurso de<br>baile</h3>
+                        <h3 class="TituloBaile">Concurso de<br>baile <br> Categoria <?php echo $categoria; ?>s</h3>
                     </div>
 
                     <?php
@@ -186,7 +207,7 @@ $topBailes = Usuarios::topBailes();
                           </div>
                           <div class="primer-lugar">
                             <h4><?php echo $nombre; ?>
-                              <span class="text-votos"> (<?php echo $votos; ?> Votos)</span>
+                              <span class="text-votos"> (calificación <?php echo $votos; ?>)</span>
                             </h4>
                           </div>
 
@@ -208,7 +229,7 @@ $topBailes = Usuarios::topBailes();
                           </div>
                           <div class="segundo-lugar">
                             <h4><?php echo $nombre; ?>
-                              <span class="text-votos"> (<?php echo $votos; ?> Votos)</span>
+                              <span class="text-votos"> (calificación <?php echo $votos; ?>)</span>
                             </h4>
                           </div>
 
@@ -230,7 +251,7 @@ $topBailes = Usuarios::topBailes();
                           </div>
                           <div class="tercer-lugar">
                             <h4><?php echo $nombre; ?>
-                              <span class="text-votos"> (<?php echo $votos; ?> Votos)</span>
+                              <span class="text-votos"> (calificación <?php echo $votos; ?>)</span>
                             </h4>
                           </div>
 
@@ -357,7 +378,7 @@ $topBailes = Usuarios::topBailes();
     <script type="text/javascript">
     $(document).ready(function(){
       setTimeout(function(){
-        location.reload();
+        window.location='EstatusGanadores.php?categoria=<?php echo $siguiente; ?>';
       }, 6000);
     });
 

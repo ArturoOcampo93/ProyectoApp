@@ -79,9 +79,16 @@ $(document).ready(function(){
 	$(".votaBaile").click(function(event) {
 		/* Act on the event */
 		var id = $(this).data( "id" );
+		var nombre = $(this).data( "nombre" );
+		$("#id").val(id);
+		$("#nombrepart").html(nombre);
+		//muestra rango de calificacion
+		$('#Calificar').modal('show');
+		//calificacion
+
 		//guarda boto
 		//envia informacion
-		var data = {id:id};
+		/*var data = {id:id};
 		var pathPost="gdr_votoBaile.php";
 
 		var xhr_posts = $.post(pathPost, data, function(data) {
@@ -98,11 +105,58 @@ $(document).ready(function(){
 		xhr_posts.fail(function(data){
 			alert(json.error_msg);
 			return false;
-		});
+		});*/
 
 		return false;
 
 	});
+	$("#btCalifica").click(function(event) {
+		/* Act on the event */
+		var id = $("#id").val();
+		var calificacion = $("input[name='estrellas']:checked").val();
+
+		//calificacion
+
+		if (calificacion>0) {
+			//guarda boto
+			//envia informacion
+			var data = {id:id, calificacion:calificacion};
+			var pathPost="gdr_votoBaile.php";
+
+			var xhr_posts = $.post(pathPost, data, function(data) {
+				var json= $.parseJSON(data);
+				if(json.success==1){
+					// reset form
+					$("#votasteerror").html(json.error_msg);
+					$("#votasteerror").show('slow/400/fast');
+					setTimeout(cierraError, 2000);
+					return false;
+				}else{
+					$("#votasteerror").html(json.error_msg);
+					$("#votasteerror").show('slow/400/fast');
+					setTimeout(cierraError, 2000);
+					return false;
+				}
+			});
+			xhr_posts.fail(function(data){
+				$("#votasteerror").html(json.error_msg);
+				$("#votasteerror").show('slow/400/fast');
+				setTimeout(cierraError, 2000);
+				return false;
+			});
+
+		}else {
+			$("#votasteerror").html("Que calificacion le das a esta parejo o equipo.");
+			$("#votasteerror").show('slow/400/fast');
+			setTimeout(cierraError, 2000);
+		}
+
+
+		return false;
+
+	});
+
+
 
 closeForm();
 closeFormLogin();
